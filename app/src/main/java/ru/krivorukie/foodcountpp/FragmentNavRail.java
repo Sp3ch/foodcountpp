@@ -1,7 +1,6 @@
 package ru.krivorukie.foodcountpp;
 
 import android.app.Fragment;
-//import android.content.SharedPreferences;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.content.Context;
@@ -11,12 +10,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.LinearLayout;
-import androidx.appcompat.app.AppCompatActivity;
-import android.animation.Animator;
-import android.animation.LayoutTransition;
 import android.animation.ObjectAnimator;
-import android.view.ViewGroup;
-import android.view.animation.OvershootInterpolator;
+import android.widget.ListView;
 import android.widget.ScrollView;
 
 import androidx.annotation.NonNull;
@@ -25,7 +20,10 @@ import androidx.annotation.Nullable;
 import static android.view.View.generateViewId;
 
 public class FragmentNavRail extends Fragment{
+    //TODO make all (if possible) final variables global in this file
 
+    int[] buttons_ids = new int [6]; //TODO get the amount of buttons (posts) when creating the single listener for all buttons
+    FragmentManager fragMan = getFragmentManager();
     final Context context = getActivity();
     //SharedPreferences memory;
     public static FragmentNavRail newInstance() {
@@ -40,7 +38,8 @@ public class FragmentNavRail extends Fragment{
     private void setNavRailSetting(){
         //TODO load settings to memory
     }
-    short getmax(boolean [] state){
+    short getmax(boolean [] state){ // gets the next element to load in loadContent() (it's "code") (codes start from 1)
+        getNavRailSetting();
         short index=0; short comp=0; for(short i=0;i<amount_of_posts;i++)if(settings[i]>comp && state[i]){comp=settings[i];index=i;}
         if(comp==0) return -1;
             else return index;
@@ -48,158 +47,117 @@ public class FragmentNavRail extends Fragment{
 
     void loadContent(View navRailIn){
         getNavRailSetting();
+        final ScrollView scroll = (ScrollView) getActivity().findViewById(R.id.scroll0);
         final LinearLayout navRail = (LinearLayout)navRailIn;
 
         boolean []unloaded = new boolean[amount_of_posts];
+        for(int i=0;i<amount_of_posts;i++)unloaded[i]=true;
         short toLoad=getmax(unloaded);short counter=0;
+        LinearLayout postsCont = scroll.findViewById(R.id.postsCont);
+        View iterator = postsCont.getChildAt(1);
+        coord=iterator.getTop();
 
-        Button b1 = new Button(getActivity());
-        b1.setText("456");
-        b1.setLayoutParams(new LinearLayout.LayoutParams(
-                LinearLayout.LayoutParams.MATCH_PARENT,
-                LinearLayout.LayoutParams.WRAP_CONTENT, 1));
-        b1.setId(generateViewId());
-        b1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) { navRail.removeView(v);
-            } // TODO: scroll the scroll and change the post
-        });
-        navRail.addView(b1);
 
-        while(counter<1){
+Button buToLoad;
+int id;
 
-            switch(toLoad){
-                case 1: break;
+        while(toLoad!=-1 && counter<6){//
+            buToLoad = new Button(getActivity());
+
+            buToLoad.setText("№");
+            buToLoad.setId(generateViewId());
+            LinearLayout.LayoutParams buToLoadParams = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT,1);
+            buToLoadParams.setMargins(0,-10*(int)navRail.getResources().getDisplayMetrics().density,0,-8*(int)navRail.getResources().getDisplayMetrics().density);
+            buToLoad.setLayoutParams(buToLoadParams);
+            buToLoad.setOnClickListener(new View.OnClickListener() {
+                @Override   //TODO may be usefull to replace this with toggle buttons and onCheckedChangedListener()
+                public void onClick(View v) { //navRail.removeView(v);
+                    ScrollView scroll = (ScrollView) getActivity().findViewById(R.id.scroll0);
+                    //scroll.smoothScrollTo(0,300*2);
+                    ((Button)v).setText(Integer.toString(scroll.getScrollY()));
+
+                    scroll.smoothScrollBy(0,0); //TODO this stops any scroll movement, but eats the time from animation as a delay, it looks like sh, +1 to epilepsy, but it works tho
+                    ObjectAnimator objectAnimator = ObjectAnimator.ofInt(scroll, "scrollY", scroll.getScrollY(), coord*a).setDuration(500);
+                    objectAnimator.start();a++;
+                    //TODO replace the fragment and toggle the button (action bar buttons actions should be changed too)
+                } // TODO: scroll the scroll and change the post
+            });
+            switch(toLoad){//TODO generate id's for buttons from outer method for all the buttons possible at once, then send these ids here amd use em
+                    case 0:
+                        id=generateViewId();
+                        buToLoad.setId(id);
+                        buToLoad.setText("admin "+Integer.toString(id));
+                    break;
+                    case 1:
+                        id=generateViewId();
+                        buToLoad.setId(id);
+                        buToLoad.setText("1 "+Integer.toString(id));
+                    break;
+                    case 2:
+                        id=generateViewId();
+                        buToLoad.setId(id);
+                        buToLoad.setText("2 "+Integer.toString(id));
+                    break;
+                    case 3:
+                        id=generateViewId();
+                        buToLoad.setId(id);
+                        buToLoad.setText("3 "+Integer.toString(id));
+                    break;
+                    case 4:
+                        id=generateViewId();
+                        buToLoad.setId(id);
+                        buToLoad.setText("4 "+Integer.toString(id));
+                    break;
+                    case 5:
+                        id=generateViewId();
+                        buToLoad.setId(id);
+                        buToLoad.setText("5 "+Integer.toString(id));
+                    break;
+                    case 6:
+                        id=generateViewId();
+                        buToLoad.setId(id);
+                        buToLoad.setText("6 "+Integer.toString(id));
+                    break;
+                    case 7:
+                        id=generateViewId();
+                        buToLoad.setId(id);
+                        buToLoad.setText("7 "+Integer.toString(id));
+                    break;
+                    case 8:
+                        id=generateViewId();
+                        buToLoad.setId(id);
+                        buToLoad.setText("8 "+Integer.toString(id));
+                    break;
+                    case 9:
+                        id=generateViewId();
+                        buToLoad.setId(id);
+                        buToLoad.setText("9 "+Integer.toString(id));
+                    break;
                 default:
-            break;
-            }counter++;
-        }
-/*
-        while( counter<1){//toLoad!=-1 &&
-            FragmentTransaction fragTrans = fragMan.beginTransaction();
-            switch(toLoad){
-                case 0:/*
-                                          //pasted code of dynamical button placement
-
-                    Button b = new Button(getActivity());
-                    b.setText("№");
-                    b.setLayoutParams(new LinearLayout.LayoutParams(
-                            LinearLayout.LayoutParams.MATCH_PARENT,
-                            LinearLayout.LayoutParams.WRAP_CONTENT, 1));
-                    b.setId(generateViewId());
-                    b.setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View v) { //navRail.removeView(v);
-                        } // TODO: scroll the scroll and change the post
-                    });
-                    navRail.addView(b);                                                              // end of button placement
-
-
-
-                    //FragmentPostTest postTest = new FragmentPostTest();
-                    //fragTrans.add(R.id.navRail, postTest);
-                    break;/*
-                case 1:
-                    FragmentPostTest postTest1 = new FragmentPostTest();
-                    fragTrans.add(R.id.navRail, postTest1);
-                    break;
-                case 2:
-                    FragmentPostTest postTest2 = new FragmentPostTest();
-                    fragTrans.add(R.id.navRail, postTest2);
-                    break;
-                case 3:
-                    FragmentPostTest postTest3 = new FragmentPostTest();
-                    fragTrans.add(R.id.navRail, postTest3);
-                    break;
-                case 4:
-                    FragmentPostTest postTest4 = new FragmentPostTest();
-                    fragTrans.add(R.id.navRail, postTest4);
-                    break;
-                case 5: // last in testing
-                    FragmentPostTest postTest5 = new FragmentPostTest();
-                    fragTrans.add(R.id.navRail, postTest5);
-                    break;
-                case 6:
-                    FragmentPostTest postTest6 = new FragmentPostTest();
-                    fragTrans.add(R.id.navRail, postTest6);
-                    break;
-                case 7:
-                    FragmentPostTest postTest7 = new FragmentPostTest();
-                    fragTrans.add(R.id.navRail, postTest7);
-                    break;
-                case 8:
-                    FragmentPostTest postTest8 = new FragmentPostTest();
-                    fragTrans.add(R.id.navRail, postTest8);
-                    break;
-                case 9:
-                    FragmentPostTest postTest9 = new FragmentPostTest();
-                    fragTrans.add(R.id.navRail, postTest9);
-                    break;
-
-                default:
-                    //getActivity();
-
-                    /*
-                    Button b2 = new Button(getActivity());
-                    b2.setText("789");
-                    b2.setLayoutParams(new LinearLayout.LayoutParams(
-                            LinearLayout.LayoutParams.MATCH_PARENT,
-                            LinearLayout.LayoutParams.WRAP_CONTENT, 1));
-                    b2.setId(generateViewId());
-                    b2.setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View v) { //navRail.removeView(v);
-                        } // TODO: scroll the scroll and change the post
-                    });
-                    navRail.addView(b2);
-                    break;
+                    id=generateViewId();
+                    buToLoad.setId(id);
+                    buToLoad.setText("default "+Integer.toString(id));break;
             }
-            FragmentPostTest postTest = new FragmentPostTest();
-            fragTrans.add(R.id.navRail, postTest);
-            fragTrans.commit();
+            navRail.addView(buToLoad);
 
             unloaded[toLoad]=false;
             toLoad = getmax(unloaded);
-            counter++; }*/
+            counter++; }
     }
-
-    private int a=0;
+    private int a=0; static int coord;
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState){
 
 
-        final View view=inflater.inflate(R.layout.fragment_nav_rail, container, false);
+        final View view=inflater.inflate(R.layout.fragment_navrail, container, false);
 
         LinearLayout navRail =(LinearLayout)  view.findViewById(R.id.navRail);
 
-        Button b1 = new Button(getActivity());
-        b1.setText("№");
-        b1.setLayoutParams(new LinearLayout.LayoutParams(
-                LinearLayout.LayoutParams.MATCH_PARENT,
-                LinearLayout.LayoutParams.WRAP_CONTENT, 1));
-        b1.setId(generateViewId());
-        b1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) { //navRail.removeView(v);
-                ScrollView scroll = (ScrollView) getActivity().findViewById(R.id.scroll0);
-                //scroll.smoothScrollTo(0,300*2);
-                ((Button)v).setText(Integer.toString(scroll.getScrollY()));
 
-                ObjectAnimator objectAnimator = ObjectAnimator.ofInt(scroll, "scrollY", scroll.getScrollY(), 100*a+600).setDuration(200);
-                objectAnimator.start();a++;
-                //TODO catch the position variable from bundle
-                //String strtext = getArguments().getString("position");
-            } // TODO: scroll the scroll and change the post
-        });
-        navRail.addView(b1);
-        loadContent(navRail);
+        //static int coord = coord1[1];
 
-        final FragmentManager fragMan = getFragmentManager();
-        FragmentTransaction fragTrans = fragMan.beginTransaction();
-        FragmentPostTest postTest = new FragmentPostTest();
-        fragTrans.add(R.id.postsCont, postTest);
-        fragTrans.commit();
 
+       loadContent(navRail);
 
 
     return view;}
