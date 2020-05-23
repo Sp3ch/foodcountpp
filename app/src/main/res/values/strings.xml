@@ -3,7 +3,8 @@
     <string name="f1_button">Help</string>
     <string name="s_button">Settings</string>
     <string name="go_button">Go it</string>
-    <string name="m_button">Categories</string>
+    <string name="m_button_off"><![CDATA[<—— ]]></string>
+    <string name="m_button_on"><![CDATA[ ——>]]></string>
     <string name="enter_name">Введите имя набора</string>
     <string name="enter_ID">Введите ID</string>
     <string name="enter_product">Введите название продукта</string>

@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="ru.krivorukie.foodcountpp">
-
+    <uses-permission
+        android:name="android.permission.INTERNET"
+        />
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,18 +11,26 @@
         android:roundIcon="@mipmap/ic_ggf_logo_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".ActivityPage0">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity><activity android:name=".Page4Activity">
+        </activity>
+        <activity android:name=".ActivityPage4">
             <intent-filter>
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity><activity android:name=".Page5Activity">
+        </activity>
+        <activity android:name=".ActivityPage5">
+            <intent-filter>
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ActivityPageInDevelopment">
             <intent-filter>
 
                 <category android:name="android.intent.category.LAUNCHER" />
