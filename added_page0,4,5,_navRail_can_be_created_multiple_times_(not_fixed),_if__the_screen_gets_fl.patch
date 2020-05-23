@@ -1,0 +1,2505 @@
+Index: app/src/main/res/layout/activity_main.xml
+===================================================================
+--- app/src/main/res/layout/activity_main.xml	(revision 7bb59c4c2aec8a212487c2f34939a5bb4fb65669)
++++ app/src/main/res/layout/activity_main.xml	(revision 7bb59c4c2aec8a212487c2f34939a5bb4fb65669)
+@@ -1,18 +0,0 @@
+-<?xml version="1.0" encoding="utf-8"?>
+-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+-    xmlns:app="http://schemas.android.com/apk/res-auto"
+-    xmlns:tools="http://schemas.android.com/tools"
+-    android:layout_width="match_parent"
+-    android:layout_height="match_parent"
+-    tools:context=".MainActivity">
+-
+-    <TextView
+-        android:layout_width="wrap_content"
+-        android:layout_height="wrap_content"
+-        android:text="Hello World!"
+-        app:layout_constraintBottom_toBottomOf="parent"
+-        app:layout_constraintLeft_toLeftOf="parent"
+-        app:layout_constraintRight_toRightOf="parent"
+-        app:layout_constraintTop_toTopOf="parent" />
+-
+-</androidx.constraintlayout.widget.ConstraintLayout>
+\ No newline at end of file
+Index: app/src/main/res/layout/page_0.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/layout/page_0.xml	(date 1587163239352)
++++ app/src/main/res/layout/page_0.xml	(date 1587163239352)
+@@ -0,0 +1,98 @@
++<?xml version="1.0" encoding="utf-8"?>
++<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
++    xmlns:app="http://schemas.android.com/apk/res-auto"
++    xmlns:tools="http://schemas.android.com/tools"
++    android:layout_width="match_parent"
++    android:layout_height="match_parent"
++    tools:context=".MainActivity">
++
++    <LinearLayout
++        android:id="@+id/page_0_upper_screen"
++        android:animateLayoutChanges="true"
++        android:layout_width="0dp"
++        android:layout_height="0dp"
++        app:layout_constraintBottom_toBottomOf="@+id/guideline"
++        app:layout_constraintEnd_toEndOf="parent"
++        app:layout_constraintStart_toStartOf="parent"
++        app:layout_constraintTop_toTopOf="@+id/guideline2">
++
++        <ScrollView
++            android:id="@+id/scroll0"
++            android:layout_width="0dp"
++            android:layout_height="match_parent"
++            android:layout_weight="4"
++            android:animateLayoutChanges="true"
++            android:gravity="top|fill_vertical">
++
++            <LinearLayout
++                android:id="@+id/postsCont"
++                android:layout_width="match_parent"
++                android:layout_height="wrap_content"
++                android:orientation="vertical" />
++        </ScrollView>
++
++
++
++    </LinearLayout>
++
++    <LinearLayout
++        android:layout_width="match_parent"
++        android:layout_height="0dp"
++        android:orientation="horizontal"
++        app:layout_constraintBottom_toBottomOf="@+id/guideline3"
++        app:layout_constraintTop_toTopOf="@+id/guideline">
++
++        <Button
++            android:id="@+id/button1"
++            android:layout_width="wrap_content"
++            android:layout_height="match_parent"
++            android:layout_weight="1"
++            android:text="@string/f1_button" />
++
++        <Button
++            android:id="@+id/button2"
++            android:layout_width="wrap_content"
++            android:layout_height="match_parent"
++            android:layout_weight="1"
++            android:text="@string/s_button" />
++
++        <Button
++            android:id="@+id/button3"
++            android:layout_width="wrap_content"
++            android:layout_height="match_parent"
++            android:layout_weight="1"
++            android:text="@string/go_button" />
++
++        <ToggleButton
++            android:id="@+id/button4"
++            android:layout_width="wrap_content"
++            android:layout_height="match_parent"
++            android:layout_weight="10"
++            android:textOff="@string/m_button"
++            android:textOn="@string/m_button" />
++    </LinearLayout>
++
++    <androidx.constraintlayout.widget.Guideline
++        android:id="@+id/guideline"
++        android:layout_width="wrap_content"
++        android:layout_height="wrap_content"
++        android:orientation="horizontal"
++        app:layout_constraintGuide_end="73dp" />
++
++    <androidx.constraintlayout.widget.Guideline
++        android:id="@+id/guideline2"
++        android:layout_width="wrap_content"
++        android:layout_height="wrap_content"
++        android:orientation="horizontal"
++        app:layout_constraintGuide_begin="20dp"
++        app:layout_constraintGuide_percent="0.0" />
++
++    <androidx.constraintlayout.widget.Guideline
++        android:id="@+id/guideline3"
++        android:layout_width="wrap_content"
++        android:layout_height="wrap_content"
++        android:orientation="horizontal"
++        app:layout_constraintGuide_begin="20dp"
++        app:layout_constraintGuide_percent="1.0" />
++
++</androidx.constraintlayout.widget.ConstraintLayout>
+\ No newline at end of file
+Index: app/src/main/res/layout/test_next_page.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/layout/test_next_page.xml	(date 1582971962011)
++++ app/src/main/res/layout/test_next_page.xml	(date 1582971962011)
+@@ -0,0 +1,11 @@
++<?xml version="1.0" encoding="utf-8"?>
++<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
++    android:orientation="vertical" android:layout_width="match_parent"
++    android:layout_height="match_parent">
++
++    <TextView
++        android:id="@+id/textView4"
++        android:layout_width="match_parent"
++        android:layout_height="wrap_content"
++        android:text="hello, I'm the next page" />
++</LinearLayout>
+\ No newline at end of file
+Index: app/src/main/res/layout/fragment_nav_rail.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/layout/fragment_nav_rail.xml	(date 1587059341344)
++++ app/src/main/res/layout/fragment_nav_rail.xml	(date 1587059341344)
+@@ -0,0 +1,13 @@
++<?xml version="1.0" encoding="utf-8"?>
++<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
++    xmlns:tools="http://schemas.android.com/tools"
++    android:id="@+id/navRail"
++    android:layout_width="0dp"
++    android:layout_height="match_parent"
++    android:layout_weight="1"
++    android:animateLayoutChanges="true"
++    android:background="#555555"
++    android:gravity="end"
++    android:orientation="vertical">
++
++</LinearLayout>
+\ No newline at end of file
+Index: app/src/main/res/values/strings.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/values/strings.xml	(revision 7bb59c4c2aec8a212487c2f34939a5bb4fb65669)
++++ app/src/main/res/values/strings.xml	(date 1587150830333)
+@@ -1,3 +1,12 @@
+ <resources>
+-    <string name="app_name">Foodcount++</string>
++    <string name="app_name">GGF</string>
++    <string name="f1_button">Help</string>
++    <string name="s_button">Settings</string>
++    <string name="go_button">Go it</string>
++    <string name="m_button">Categories</string>
++    <string name="enter_name">Введите имя набора</string>
++    <string name="enter_ID">Введите ID</string>
++    <string name="enter_product">Введите название продукта</string>
++    <string name="enter_number">Введите количество продукта</string>
++
+ </resources>
+Index: app/src/main/res/values/styles.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/values/styles.xml	(revision 7bb59c4c2aec8a212487c2f34939a5bb4fb65669)
++++ app/src/main/res/values/styles.xml	(date 1587155265428)
+@@ -1,11 +1,19 @@
+ <resources>
+ 
+     <!-- Base application theme. -->
+-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
++    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+         <!-- Customize your theme here. -->
+         <item name="colorPrimary">@color/colorPrimary</item>
+         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+         <item name="colorAccent">@color/colorAccent</item>
+     </style>
+ 
+-</resources>
++
++        <style name="Toolbar">
++            <item name="android:layout_width">match_parent</item>
++            <item name="android:layout_height">?attr/actionBarSize</item>
++            <item name="theme">@style/ThemeOverlay.AppCompat.Dark.ActionBar</item>
++            <item name="android:background">@color/colorPrimary</item>
++        </style>
++
++</resources>
+\ No newline at end of file
+Index: app/src/main/java/ru/krivorukie/foodcountpp/Page4Activity.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/java/ru/krivorukie/foodcountpp/Page4Activity.java	(date 1587153425974)
++++ app/src/main/java/ru/krivorukie/foodcountpp/Page4Activity.java	(date 1587153425974)
+@@ -0,0 +1,16 @@
++package ru.krivorukie.foodcountpp;
++
++import android.app.Activity;
++import android.os.Bundle;
++
++public class Page4Activity extends Activity {
++
++    @Override
++    protected void onCreate(Bundle savedInstanceState){
++        super.onCreate(savedInstanceState);
++        setContentView(R.layout.page_4);
++
++
++
++    }
++}
+Index: app/src/main/java/ru/krivorukie/foodcountpp/Page5Activity.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/java/ru/krivorukie/foodcountpp/Page5Activity.java	(date 1587154593659)
++++ app/src/main/java/ru/krivorukie/foodcountpp/Page5Activity.java	(date 1587154593659)
+@@ -0,0 +1,16 @@
++package ru.krivorukie.foodcountpp;
++
++import android.app.Activity;
++import android.os.Bundle;
++
++public class Page5Activity extends Activity {
++
++    @Override
++    protected void onCreate(Bundle savedInstanceState){
++        super.onCreate(savedInstanceState);
++        setContentView(R.layout.page_5);
++
++
++
++    }
++}
+Index: app/src/main/java/ru/krivorukie/foodcountpp/MainActivity.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/java/ru/krivorukie/foodcountpp/MainActivity.java	(revision 7bb59c4c2aec8a212487c2f34939a5bb4fb65669)
++++ app/src/main/java/ru/krivorukie/foodcountpp/MainActivity.java	(date 1587167556809)
+@@ -2,13 +2,106 @@
+ 
+ import androidx.appcompat.app.AppCompatActivity;
+ 
++
++import android.app.FragmentManager;
++import android.app.FragmentTransaction;
++import android.content.Intent;
+ import android.os.Bundle;
++import android.view.View;
++import android.view.Window;
++import android.widget.Button;
++import android.widget.CompoundButton;
++import android.widget.ToggleButton;
++
++
++import static android.app.PendingIntent.getActivity;
+ 
+ public class MainActivity extends AppCompatActivity {
+-
++Button button1,button2,button3,button4;
++    private boolean navRailDefaultState=true;
+     @Override
+-    protected void onCreate(Bundle savedInstanceState) {
++    protected void onCreate(Bundle savedInstanceState) {/*
++        View decorView = getWindow().getDecorView();        // /    Hiding status bar
++        int uiOptions = View.SYSTEM_UI_FLAG_FULLSCREEN;     // |
++        decorView.setSystemUiVisibility(uiOptions);         // \    _________________
++*/
++        //requestWindowFeature(Window.FEATURE_NO_TITLE);      //will hide the title
++        //getSupportActionBar().hide();                       // hide the title bar
++
+         super.onCreate(savedInstanceState);
+-        setContentView(R.layout.activity_main);
++        setContentView(R.layout.page_0);
++        button1 = (Button) findViewById(R.id.button1);
++        button2 = (Button) findViewById(R.id.button2);
++        button3 = (Button) findViewById(R.id.button3);
++        button4 = (ToggleButton) findViewById(R.id.button4);
++        if(navRailDefaultState){((ToggleButton) button4).setChecked(true);
++        //TODO add navRail fragment to the screen if it's stated by the settings of user
++        }
++
++        final FragmentManager fragMan = getFragmentManager();
++        //int position=0;         //TODO
++        FragmentTransaction fragTrans;
++        FragmentPostTest postTest;
++        for(int i=0;i<10;i++){
++        fragTrans = fragMan.beginTransaction();
++        postTest = new FragmentPostTest();
++        fragTrans.add(R.id.postsCont, postTest);
++        fragTrans.commit();} //TODO set the position variable of second fragment to bundle, then catch it from navRail fragment class
++        //Bundle bundle = new Bundle();
++        //bundle.putString("position",Integer.toString(position));
++
++        CompoundButton.OnCheckedChangeListener navRailOpener = new CompoundButton.OnCheckedChangeListener(){
++            @Override
++            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
++                if(isChecked){
++                    if(navRailDefaultState){} //TODO able to pop back
++                    else{}//TODO
++                    //TODO add navRail fragment to the screen (if navRailDefaultState then able to delete back)
++                }
++                else{
++                    //TODO remove navRail fragment from the screen (if NOT navRailDefaultState then able to delete back)
++                }
++            }};
++        ((ToggleButton) button4).setOnCheckedChangeListener(navRailOpener);
++
++        //final Context context=getApplicationContext();
++
++        View.OnClickListener listener1= new View.OnClickListener(){
++            Intent i1;
++            @Override
++            public void onClick(View v){
++                switch(v.getId()){
++                    case R.id.button2:
++                        i1=new Intent(MainActivity.this,Page4Activity.class);
++                        startActivity(i1);
++                        break;
++
++                    case R.id.button3:
++                        i1=new Intent(MainActivity.this,Page5Activity.class);
++                        startActivity(i1);
++
++                        break;
++
++                    case R.id.button1:
++                        FragmentNavRail fnr1=new FragmentNavRail();
++                        FragmentTransaction navRailTransaction = fragMan.beginTransaction();
++                        navRailTransaction.add(R.id.page_0_upper_screen, fnr1);
++                        navRailTransaction.commit();
++                        break;
++                default: break;
++                }
++            }
++
++        };
++button3.setOnClickListener(listener1);
++button2.setOnClickListener(listener1);
++button1.setOnClickListener(listener1);
+     }
+ }
++
++
++/*
++i1=new Intent(MainActivity.this,Page_0.class);
++startActivity(i1);
++requestWindowFeature(Window.FEATURE_NO_TITLE);      //will hide the title
++    getSupportActionBar().hide();                       // hide the title bar      */
+\ No newline at end of file
+Index: app/src/main/res/layout/menu_main.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/layout/menu_main.xml	(date 1587150370477)
++++ app/src/main/res/layout/menu_main.xml	(date 1587150370477)
+@@ -0,0 +1,51 @@
++<?xml version="1.0" encoding="utf-8"?>
++<menu
++    xmlns:android="http://schemas.android.com/apk/res/android"
++    xmlns:app="http://schemas.android.com/apk/res-auto"
++    xmlns:tools="http://schemas.android.com/tools"
++    tools:context=".MainActivity">
++
++    <item
++        android:id="@+id/toolbar_item_1"
++        app:showAsAction="always"
++        android:icon="@drawable/ic_priority_high_white"
++        android:title="M1"
++        android:orderInCategory="1"/>
++
++    <item
++        android:id="@+id/toolbar_item_2"
++        app:showAsAction="always"
++        android:icon="@drawable/ic_arrow_forward_white"
++        android:title="M2"
++        android:orderInCategory="2"/>
++
++    <item
++        android:id="@+id/toolbar_item_3"
++        app:showAsAction="always"
++        android:icon="@drawable/ic_settings_white"
++        android:title="M3"
++        android:orderInCategory="3"/>
++
++    <item
++        android:id="@+id/toolbar_item_4"
++        app:showAsAction="always"
++        android:icon="@drawable/ic_refresh_white"
++        android:title="M3"
++        android:orderInCategory="4"/>
++
++    <item
++        android:id="@+id/menu_item_1"
++        android:title="Something first"
++        android:orderInCategory="1"/>
++
++    <item
++        android:id="@+id/menu_item_2"
++        android:title="Something second"
++        android:orderInCategory="2"/>
++
++    <item
++        android:id="@+id/menu_item_3"
++        android:title="Something third"
++        android:orderInCategory="3"/>
++
++</menu>
+\ No newline at end of file
+Index: app/src/main/res/layout/page_5.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/layout/page_5.xml	(date 1587159899986)
++++ app/src/main/res/layout/page_5.xml	(date 1587159899986)
+@@ -0,0 +1,177 @@
++<?xml version="1.0" encoding="utf-8"?>
++<androidx.constraintlayout.widget.ConstraintLayout
++    xmlns:android="http://schemas.android.com/apk/res/android"
++    xmlns:app="http://schemas.android.com/apk/res-auto"
++    xmlns:tools="http://schemas.android.com/tools"
++    android:layout_width="match_parent"
++    android:layout_height="match_parent"
++    tools:context=".MainActivity">
++
++    <androidx.appcompat.widget.Toolbar
++        android:id="@+id/toolbar"
++        style="@style/Toolbar"
++        tools:ignore="MissingConstraints"
++        android:layout_width="match_parent"
++        android:layout_height="0dp"
++        app:layout_constraintTop_toTopOf="@+id/guideline2"
++        app:layout_constraintBottom_toBottomOf="@+id/guideline3"/>
++
++    <LinearLayout
++        android:id="@+id/linearLayout1"
++        android:layout_width="0dp"
++        android:layout_height="0dp"
++        android:layout_marginLeft="10dp"
++        android:layout_marginRight="10dp"
++        app:layout_constraintEnd_toEndOf="parent"
++        app:layout_constraintStart_toStartOf="parent"
++        app:layout_constraintTop_toTopOf="@+id/guideline1"
++        app:layout_constraintBottom_toBottomOf="@+id/guideline2">
++
++        <ScrollView
++            android:layout_width="match_parent"
++            android:layout_height="match_parent"
++            android:gravity="top|fill_vertical">
++
++            <LinearLayout
++                android:layout_width="match_parent"
++                android:layout_height="wrap_content"
++                android:orientation="vertical">
++
++                <TextView
++                    android:id="@+id/textView1"
++                    android:layout_width="match_parent"
++                    android:layout_height="40dp"
++                    android:gravity="bottom|left"
++                    android:text="Название продукта"
++                    android:textAlignment="gravity"
++                    android:textColor="#000000"
++                    android:textSize="18sp" />
++
++                <LinearLayout
++                    android:id="@+id/linearLayout11"
++                    android:layout_width="match_parent"
++                    android:layout_height="40dp"
++                    android:orientation="horizontal">
++
++                    <EditText
++                        android:id="@+id/editText1"
++                        android:layout_width="match_parent"
++                        android:layout_height="match_parent"
++                        android:layout_weight="9"
++                        android:hint="@string/enter_product"
++                        android:textAlignment="textStart"
++                        android:textSize="18sp" />
++
++                    <Button
++                        android:id="@+id/button1"
++                        android:layout_width="60dp"
++                        android:layout_height="match_parent"
++                        android:layout_weight="1"
++                        android:background="@mipmap/ic_next" />
++
++                </LinearLayout>
++
++                <TextView
++                    android:id="@+id/textView2"
++                    android:layout_width="match_parent"
++                    android:layout_height="40dp"
++                    android:gravity="bottom|left"
++                    android:text="Флаг/ID"
++                    android:textAlignment="gravity"
++                    android:textColor="#000000"
++                    android:textSize="18sp" />
++
++                <LinearLayout
++                    android:id="@+id/linearLayout12"
++                    android:layout_width="match_parent"
++                    android:layout_height="40dp"
++                    android:orientation="horizontal">
++
++                    <EditText
++                        android:id="@+id/editText2"
++                        android:layout_width="match_parent"
++                        android:layout_height="match_parent"
++                        android:layout_weight="9"
++                        android:hint="@string/enter_ID"
++                        android:textAlignment="textStart"
++                        android:textSize="18sp" />
++
++                    <Button
++                        android:id="@+id/button2"
++                        android:layout_width="60dp"
++                        android:layout_height="match_parent"
++                        android:layout_weight="1"
++                        android:background="@mipmap/ic_random"
++                        android:textSize="18sp"
++                        android:textColor="#000000"/>
++
++                </LinearLayout>
++
++                <TextView
++                    android:id="@+id/textView8"
++                    android:layout_width="match_parent"
++                    android:layout_height="40dp"
++                    android:gravity="bottom|left"
++                    android:text="Количество продукта"
++                    android:textAlignment="gravity"
++                    android:textColor="#000000"
++                    android:textSize="18sp" />
++
++                <LinearLayout
++                    android:id="@+id/linearLayout13"
++                    android:layout_width="match_parent"
++                    android:layout_height="40dp"
++                    android:orientation="horizontal">
++
++                    <EditText
++                        android:id="@+id/editText3"
++                        android:layout_width="match_parent"
++                        android:layout_height="match_parent"
++                        android:layout_weight="9"
++                        android:hint="@string/enter_number"
++                        android:textAlignment="textStart"
++                        android:textSize="18sp" />
++
++                    <ToggleButton
++                        android:id="@+id/button3"
++                        android:layout_width="60dp"
++                        android:layout_height="match_parent"
++                        android:layout_weight="1"
++                        android:background="@mipmap/ic_back"
++                        android:textColor="#000000"
++                        android:textOff="мл"
++                        android:textOn="г"
++                        android:textSize="14sp" />
++
++                </LinearLayout>
++
++            </LinearLayout>
++
++        </ScrollView>
++
++    </LinearLayout>
++
++    <androidx.constraintlayout.widget.Guideline
++        android:id="@+id/guideline1"
++        android:layout_width="wrap_content"
++        android:layout_height="wrap_content"
++        android:orientation="horizontal"
++        app:layout_constraintGuide_begin="20dp"
++        app:layout_constraintGuide_percent="0.0" />
++
++    <androidx.constraintlayout.widget.Guideline
++        android:id="@+id/guideline2"
++        android:layout_width="wrap_content"
++        android:layout_height="wrap_content"
++        android:orientation="horizontal"
++        app:layout_constraintGuide_end="?attr/actionBarSize" />
++
++    <androidx.constraintlayout.widget.Guideline
++        android:id="@+id/guideline3"
++        android:layout_width="wrap_content"
++        android:layout_height="wrap_content"
++        android:orientation="horizontal"
++        app:layout_constraintGuide_begin="20dp"
++        app:layout_constraintGuide_percent="1.0"/>
++
++</androidx.constraintlayout.widget.ConstraintLayout>
+\ No newline at end of file
+Index: app/src/main/res/layout/page_4.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/layout/page_4.xml	(date 1587161727471)
++++ app/src/main/res/layout/page_4.xml	(date 1587161727471)
+@@ -0,0 +1,337 @@
++<?xml version="1.0" encoding="utf-8"?>
++<androidx.constraintlayout.widget.ConstraintLayout
++    xmlns:android="http://schemas.android.com/apk/res/android"
++    xmlns:app="http://schemas.android.com/apk/res-auto"
++    xmlns:tools="http://schemas.android.com/tools"
++    android:layout_width="match_parent"
++    android:layout_height="match_parent"
++    tools:context=".MainActivity">
++
++    <androidx.appcompat.widget.Toolbar
++        android:id="@+id/toolbar"
++        style="@style/Toolbar"
++        tools:ignore="MissingConstraints"
++        android:layout_width="match_parent"
++        android:layout_height="0dp"
++        app:layout_constraintTop_toTopOf="@+id/guideline2"
++        app:layout_constraintBottom_toBottomOf="@+id/guideline3"/>
++
++    <LinearLayout
++        android:id="@+id/linearLayout1"
++        android:layout_width="match_parent"
++        android:layout_height="0dp"
++        android:layout_marginLeft="10dp"
++        android:layout_marginRight="10dp"
++        app:layout_constraintEnd_toEndOf="parent"
++        app:layout_constraintStart_toStartOf="parent"
++        app:layout_constraintTop_toTopOf="@+id/guideline1"
++        app:layout_constraintBottom_toBottomOf="@+id/guideline2">
++
++        <ScrollView
++            android:layout_width="match_parent"
++            android:layout_height="match_parent"
++            android:gravity="top|fill_vertical">
++
++            <LinearLayout
++                android:layout_width="match_parent"
++                android:layout_height="wrap_content"
++                android:orientation="vertical">
++
++                <TextView
++                    android:id="@+id/textView1"
++                    android:layout_width="match_parent"
++                    android:layout_height="40dp"
++                    android:gravity="bottom|left"
++                    android:text="Имя набора"
++                    android:textAlignment="gravity"
++                    android:textColor="#000000"
++                    android:textSize="18sp" />
++
++                <LinearLayout
++                    android:id="@+id/linearLayout11"
++                    android:layout_width="match_parent"
++                    android:layout_height="40dp"
++                    android:orientation="horizontal">
++
++                    <EditText
++                        android:id="@+id/editText1"
++                        android:layout_width="match_parent"
++                        android:layout_height="match_parent"
++                        android:layout_weight="9"
++                        android:hint="@string/enter_name"
++                        android:textAlignment="textStart"
++                        android:textSize="18sp" />
++
++                    <Button
++                        android:id="@+id/button1"
++                        android:layout_width="60dp"
++                        android:layout_height="match_parent"
++                        android:layout_weight="1"
++                        android:background="@mipmap/ic_next" />
++
++                </LinearLayout>
++
++                <TextView
++                    android:id="@+id/textView2"
++                    android:layout_width="match_parent"
++                    android:layout_height="40dp"
++                    android:gravity="bottom|left"
++                    android:text="Флаг/ID"
++                    android:textAlignment="gravity"
++                    android:textColor="#000000"
++                    android:textSize="18sp" />
++
++                <LinearLayout
++                    android:id="@+id/linearLayout12"
++                    android:layout_width="match_parent"
++                    android:layout_height="40dp"
++                    android:orientation="horizontal">
++
++                    <EditText
++                        android:id="@+id/editText2"
++                        android:layout_width="match_parent"
++                        android:layout_height="match_parent"
++                        android:layout_weight="9"
++                        android:hint="@string/enter_ID"
++                        android:textAlignment="textStart"
++                        android:textSize="18sp" />
++
++                    <Button
++                        android:id="@+id/button2"
++                        android:layout_width="60dp"
++                        android:layout_height="match_parent"
++                        android:layout_weight="1"
++                        android:background="@mipmap/ic_random"
++                        android:textSize="18sp"
++                        android:textColor="#000000"/>
++
++                </LinearLayout>
++
++                <LinearLayout
++                    android:id="@+id/linearLayout13"
++                    android:layout_width="match_parent"
++                    android:layout_height="40dp"
++                    android:orientation="horizontal">
++
++                    <TextView
++                        android:id="@+id/textView3"
++                        android:layout_width="match_parent"
++                        android:layout_height="match_parent"
++                        android:layout_weight="9"
++                        android:gravity="center|left"
++                        android:text="Продуктов в наборе:"
++                        android:textAlignment="gravity"
++                        android:textColor="#000000"
++                        android:textSize="18sp" />
++
++                    <TextView
++                        android:id="@+id/textView4"
++                        android:layout_width="60dp"
++                        android:layout_height="match_parent"
++                        android:layout_weight="1"
++                        android:gravity="center"
++                        android:text="1"
++                        android:textSize="18sp"
++                        android:textAlignment="gravity"
++                        android:textAllCaps="false"
++                        android:textColor="#000000" />
++                    <!--Единичка тут просто для красоты, убрать в дальнейшем и заменить логикой-->
++
++                </LinearLayout>
++
++                <LinearLayout
++                    android:id="@+id/linearLayout14"
++                    android:layout_width="match_parent"
++                    android:layout_height="40dp"
++                    android:orientation="horizontal">
++
++                    <TextView
++                        android:id="@+id/textView6"
++                        android:layout_width="match_parent"
++                        android:layout_height="match_parent"
++                        android:layout_weight="9"
++                        android:gravity="center|left"
++                        android:text="Масса набора:"
++                        android:textAlignment="gravity"
++                        android:textColor="#000000"
++                        android:textSize="18sp" />
++
++                    <TextView
++                        android:id="@+id/textView7"
++                        android:layout_width="60dp"
++                        android:layout_height="match_parent"
++                        android:layout_weight="1"
++                        android:gravity="center"
++                        android:text="50г"
++                        android:textSize="18sp"
++                        android:textAlignment="gravity"
++                        android:textAllCaps="false"
++                        android:textColor="#000000" />
++                    <!--50г тут просто для красоты, убрать в дальнейшем и заменить логикой-->
++
++                </LinearLayout>
++
++                <LinearLayout
++                    android:layout_width="match_parent"
++                    android:layout_height="100dp"
++                    android:orientation="vertical">
++
++                    <TextView
++                        android:id="@+id/textView5"
++                        android:layout_width="match_parent"
++                        android:layout_height="40dp"
++                        android:gravity="center|left"
++                        android:text="Пищевая ценность набора:"
++                        android:textAlignment="gravity"
++                        android:textColor="#000000"
++                        android:textSize="18sp" />
++
++                    <LinearLayout
++                        android:id="@+id/linearLayout15"
++                        android:layout_width="match_parent"
++                        android:layout_height="30dp"
++                        android:orientation="horizontal">
++
++                        <TextView
++                            android:layout_width="0dp"
++                            android:layout_height="match_parent"
++                            android:layout_weight="1"
++                            android:gravity="center"
++                            android:text="Белки"
++                            android:textColor="#3F51B5"
++                            android:textStyle="bold" />
++
++                        <TextView
++                            android:layout_width="0dp"
++                            android:layout_height="match_parent"
++                            android:layout_weight="1"
++                            android:gravity="center"
++                            android:text="Жиры"
++                            android:textColor="#9C27B0"
++                            android:textStyle="bold" />
++
++                        <TextView
++                            android:layout_width="0dp"
++                            android:layout_height="match_parent"
++                            android:layout_weight="1"
++                            android:gravity="center"
++                            android:text="Углеводы"
++                            android:textColor="#009688"
++                            android:textStyle="bold" />
++
++                    </LinearLayout>
++
++                    <LinearLayout
++                        android:id="@+id/linearLayout16"
++                        android:layout_width="match_parent"
++                        android:layout_height="30dp"
++                        android:orientation="horizontal">
++
++                        <TextView
++                            android:layout_width="0dp"
++                            android:layout_height="match_parent"
++                            android:layout_weight="1"
++                            android:text="10г"
++                            android:gravity="center" />
++
++                        <TextView
++                            android:layout_width="0dp"
++                            android:layout_height="match_parent"
++                            android:layout_weight="1"
++                            android:text="25г"
++                            android:gravity="center" />
++
++                        <TextView
++                            android:layout_width="0dp"
++                            android:layout_height="match_parent"
++                            android:layout_weight="1"
++                            android:text="5г"
++                            android:gravity="center" />
++
++                    </LinearLayout>
++
++                </LinearLayout>
++
++                <TextView
++                    android:id="@+id/textView8"
++                    android:layout_width="match_parent"
++                    android:layout_height="40dp"
++                    android:gravity="center"
++                    android:text="Продукты"
++                    android:textAlignment="gravity"
++                    android:textColor="#000000"
++                    android:textSize="18sp" />
++
++                <LinearLayout
++                    android:id="@+id/linearLayout20"
++                    android:layout_width="match_parent"
++                    android:layout_height="40dp"
++                    android:orientation="horizontal">
++
++                    <TextView
++                        android:id="@+id/textView0"
++                        android:layout_width="match_parent"
++                        android:layout_height="40dp"
++                        android:layout_weight="13"
++                        android:gravity="top|start"
++                        android:text="Some product here.."
++                        android:textAlignment="gravity"
++                        android:textColor="#000000"
++                        android:textSize="14sp" />
++
++                    <Button
++                        android:id="@+id/button00"
++                        android:layout_width="40dp"
++                        android:layout_height="40dp"
++                        android:layout_weight="1"
++                        android:background="@mipmap/ic_edit"
++                        android:textSize="18sp"
++                        android:textColor="#000000"/>
++
++                    <Button
++                        android:id="@+id/button01"
++                        android:layout_width="40dp"
++                        android:layout_height="40dp"
++                        android:layout_weight="1"
++                        android:background="@mipmap/ic_delete"
++                        android:textSize="18sp"
++                        android:textColor="#000000"/>
++
++                </LinearLayout>
++
++                <Button
++                    android:layout_width="match_parent"
++                    android:layout_height="40dp"
++                    android:gravity="center"
++                    android:text="Добавить новый продукт"/>
++
++            </LinearLayout>
++
++        </ScrollView>
++
++    </LinearLayout>
++
++    <androidx.constraintlayout.widget.Guideline
++        android:id="@+id/guideline1"
++        android:layout_width="wrap_content"
++        android:layout_height="wrap_content"
++        android:orientation="horizontal"
++        app:layout_constraintGuide_begin="20dp"
++        app:layout_constraintGuide_percent="0.0" />
++
++    <androidx.constraintlayout.widget.Guideline
++        android:id="@+id/guideline2"
++        android:layout_width="wrap_content"
++        android:layout_height="wrap_content"
++        android:orientation="horizontal"
++        app:layout_constraintGuide_end="?attr/actionBarSize" />
++
++    <androidx.constraintlayout.widget.Guideline
++        android:id="@+id/guideline3"
++        android:layout_width="wrap_content"
++        android:layout_height="wrap_content"
++        android:orientation="horizontal"
++        app:layout_constraintGuide_begin="20dp"
++        app:layout_constraintGuide_percent="1.0"/>
++
++</androidx.constraintlayout.widget.ConstraintLayout>
+\ No newline at end of file
+Index: app/src/main/res/drawable/ic_settings_white.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/drawable/ic_settings_white.xml	(date 1587158874279)
++++ app/src/main/res/drawable/ic_settings_white.xml	(date 1587158874279)
+@@ -0,0 +1,5 @@
++<vector android:height="24dp" android:tint="#FFFFFF"
++    android:viewportHeight="24" android:viewportWidth="24"
++    android:width="24dp" xmlns:android="http://schemas.android.com/apk/res/android">
++    <path android:fillColor="#FF000000" android:pathData="M19.1,12.9a2.8,2.8 0,0 0,0.1 -0.9,2.8 2.8,0 0,0 -0.1,-0.9l2.1,-1.6a0.7,0.7 0,0 0,0.1 -0.6L19.4,5.5a0.7,0.7 0,0 0,-0.6 -0.2l-2.4,1a6.5,6.5 0,0 0,-1.6 -0.9l-0.4,-2.6a0.5,0.5 0,0 0,-0.5 -0.4H10.1a0.5,0.5 0,0 0,-0.5 0.4L9.3,5.4a5.6,5.6 0,0 0,-1.7 0.9l-2.4,-1a0.4,0.4 0,0 0,-0.5 0.2l-2,3.4c-0.1,0.2 0,0.4 0.2,0.6l2,1.6a2.8,2.8 0,0 0,-0.1 0.9,2.8 2.8,0 0,0 0.1,0.9L2.8,14.5a0.7,0.7 0,0 0,-0.1 0.6l1.9,3.4a0.7,0.7 0,0 0,0.6 0.2l2.4,-1a6.5,6.5 0,0 0,1.6 0.9l0.4,2.6a0.5,0.5 0,0 0,0.5 0.4h3.8a0.5,0.5 0,0 0,0.5 -0.4l0.3,-2.6a5.6,5.6 0,0 0,1.7 -0.9l2.4,1a0.4,0.4 0,0 0,0.5 -0.2l2,-3.4c0.1,-0.2 0,-0.4 -0.2,-0.6ZM12,15.6A3.6,3.6 0,1 1,15.6 12,3.6 3.6,0 0,1 12,15.6Z"/>
++</vector>
+Index: gradle/wrapper/gradle-wrapper.properties
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>windows-1251
+===================================================================
+--- gradle/wrapper/gradle-wrapper.properties	(revision 7bb59c4c2aec8a212487c2f34939a5bb4fb65669)
++++ gradle/wrapper/gradle-wrapper.properties	(date 1583834233685)
+@@ -1,6 +1,6 @@
+-#Mon Nov 18 18:43:42 MSK 2019
++#Tue Mar 10 12:57:13 MSK 2020
+ distributionBase=GRADLE_USER_HOME
+ distributionPath=wrapper/dists
+ zipStoreBase=GRADLE_USER_HOME
+ zipStorePath=wrapper/dists
+-distributionUrl=https\://services.gradle.org/distributions/gradle-5.4.1-all.zip
++distributionUrl=https\://services.gradle.org/distributions/gradle-5.6.4-all.zip
+Index: app/src/main/res/layout/fragment_post_cafes_browser.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/layout/fragment_post_cafes_browser.xml	(date 1587043098367)
++++ app/src/main/res/layout/fragment_post_cafes_browser.xml	(date 1587043098367)
+@@ -0,0 +1,13 @@
++<?xml version="1.0" encoding="utf-8"?>
++<androidx.constraintlayout.widget.ConstraintLayout
++    xmlns:android="http://schemas.android.com/apk/res/android"
++    android:layout_width="match_parent"
++    android:layout_height="200dp"
++    android:layout_weight="1">
++
++    <TextView
++        android:id="@+id/textView10"
++        android:layout_width="wrap_content"
++        android:layout_height="wrap_content"
++        android:text="What caffee has the best TMN index?" />
++</androidx.constraintlayout.widget.ConstraintLayout>
+\ No newline at end of file
+Index: app/src/main/res/layout/fragment_post_progress.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/layout/fragment_post_progress.xml	(date 1587043098286)
++++ app/src/main/res/layout/fragment_post_progress.xml	(date 1587043098286)
+@@ -0,0 +1,12 @@
++<?xml version="1.0" encoding="utf-8"?>
++<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
++    android:layout_width="match_parent"
++    android:layout_height="200dp"
++    android:layout_weight="1"    >
++
++    <TextView
++        android:id="@+id/textView7"
++        android:layout_width="match_parent"
++        android:layout_height="wrap_content"
++        android:text="user level + progress" />
++</androidx.constraintlayout.widget.ConstraintLayout>
+Index: build.gradle
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- build.gradle	(revision 7bb59c4c2aec8a212487c2f34939a5bb4fb65669)
++++ build.gradle	(date 1583834233638)
+@@ -7,7 +7,7 @@
+         
+     }
+     dependencies {
+-        classpath 'com.android.tools.build:gradle:3.5.2'
++        classpath 'com.android.tools.build:gradle:3.6.1'
+         
+         // NOTE: Do not place your application dependencies here; they belong
+         // in the individual module build.gradle files
+Index: app/src/main/res/drawable/ic_replay_black.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/drawable/ic_replay_black.xml	(date 1587151838258)
++++ app/src/main/res/drawable/ic_replay_black.xml	(date 1587151838258)
+@@ -0,0 +1,9 @@
++<vector xmlns:android="http://schemas.android.com/apk/res/android"
++        android:width="24dp"
++        android:height="24dp"
++        android:viewportWidth="24.0"
++        android:viewportHeight="24.0">
++    <path
++        android:fillColor="#FF000000"
++        android:pathData="M12,5V1L7,6l5,5V7c3.31,0 6,2.69 6,6s-2.69,6 -6,6 -6,-2.69 -6,-6H4c0,4.42 3.58,8 8,8s8,-3.58 8,-8 -3.58,-8 -8,-8z"/>
++</vector>
+Index: app/src/main/AndroidManifest.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/AndroidManifest.xml	(revision 7bb59c4c2aec8a212487c2f34939a5bb4fb65669)
++++ app/src/main/AndroidManifest.xml	(date 1587159022710)
+@@ -13,6 +13,16 @@
+             <intent-filter>
+                 <action android:name="android.intent.action.MAIN" />
+ 
++                <category android:name="android.intent.category.LAUNCHER" />
++            </intent-filter>
++        </activity><activity android:name=".Page4Activity">
++            <intent-filter>
++
++                <category android:name="android.intent.category.LAUNCHER" />
++            </intent-filter>
++        </activity><activity android:name=".Page5Activity">
++            <intent-filter>
++
+                 <category android:name="android.intent.category.LAUNCHER" />
+             </intent-filter>
+         </activity>
+Index: app/src/main/res/drawable/ic_priority_high_black.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/drawable/ic_priority_high_black.xml	(date 1587151812633)
++++ app/src/main/res/drawable/ic_priority_high_black.xml	(date 1587151812633)
+@@ -0,0 +1,12 @@
++<vector xmlns:android="http://schemas.android.com/apk/res/android"
++        android:width="24dp"
++        android:height="24dp"
++        android:viewportWidth="24.0"
++        android:viewportHeight="24.0">
++    <path
++        android:fillColor="#FF000000"
++        android:pathData="M12,19m-2,0a2,2 0,1 1,4 0a2,2 0,1 1,-4 0"/>
++    <path
++        android:fillColor="#FF000000"
++        android:pathData="M10,3h4v12h-4z"/>
++</vector>
+Index: app/src/main/res/drawable/ic_menu_white.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/drawable/ic_menu_white.xml	(date 1587151806940)
++++ app/src/main/res/drawable/ic_menu_white.xml	(date 1587151806940)
+@@ -0,0 +1,5 @@
++<vector android:height="24dp" android:tint="#FFFFFF"
++    android:viewportHeight="24.0" android:viewportWidth="24.0"
++    android:width="24dp" xmlns:android="http://schemas.android.com/apk/res/android">
++    <path android:fillColor="#FF000000" android:pathData="M3,18h18v-2L3,16v2zM3,13h18v-2L3,11v2zM3,6v2h18L21,6L3,6z"/>
++</vector>
+Index: app/src/main/res/drawable/ic_refresh_white.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/drawable/ic_refresh_white.xml	(date 1587151832019)
++++ app/src/main/res/drawable/ic_refresh_white.xml	(date 1587151832019)
+@@ -0,0 +1,5 @@
++<vector android:height="24dp" android:tint="#FFFFFF"
++    android:viewportHeight="24.0" android:viewportWidth="24.0"
++    android:width="24dp" xmlns:android="http://schemas.android.com/apk/res/android">
++    <path android:fillColor="#FF000000" android:pathData="M17.65,6.35C16.2,4.9 14.21,4 12,4c-4.42,0 -7.99,3.58 -7.99,8s3.57,8 7.99,8c3.73,0 6.84,-2.55 7.73,-6h-2.08c-0.82,2.33 -3.04,4 -5.65,4 -3.31,0 -6,-2.69 -6,-6s2.69,-6 6,-6c1.66,0 3.14,0.69 4.22,1.78L13,11h7V4l-2.35,2.35z"/>
++</vector>
+Index: app/src/main/res/drawable/ic_priority_high_white.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/drawable/ic_priority_high_white.xml	(date 1587151818939)
++++ app/src/main/res/drawable/ic_priority_high_white.xml	(date 1587151818939)
+@@ -0,0 +1,6 @@
++<vector android:height="24dp" android:tint="#FFFFFF"
++    android:viewportHeight="24.0" android:viewportWidth="24.0"
++    android:width="24dp" xmlns:android="http://schemas.android.com/apk/res/android">
++    <path android:fillColor="#FF000000" android:pathData="M12,19m-2,0a2,2 0,1 1,4 0a2,2 0,1 1,-4 0"/>
++    <path android:fillColor="#FF000000" android:pathData="M10,3h4v12h-4z"/>
++</vector>
+Index: app/src/main/res/drawable/ic_menu_black.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/drawable/ic_menu_black.xml	(date 1587151798975)
++++ app/src/main/res/drawable/ic_menu_black.xml	(date 1587151798975)
+@@ -0,0 +1,9 @@
++<vector xmlns:android="http://schemas.android.com/apk/res/android"
++        android:width="24dp"
++        android:height="24dp"
++        android:viewportWidth="24.0"
++        android:viewportHeight="24.0">
++    <path
++        android:fillColor="#FF000000"
++        android:pathData="M3,18h18v-2L3,16v2zM3,13h18v-2L3,11v2zM3,6v2h18L21,6L3,6z"/>
++</vector>
+Index: app/src/main/java/ru/krivorukie/foodcountpp/FragmentNavRail.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/java/ru/krivorukie/foodcountpp/FragmentNavRail.java	(date 1587167273132)
++++ app/src/main/java/ru/krivorukie/foodcountpp/FragmentNavRail.java	(date 1587167273132)
+@@ -0,0 +1,245 @@
++package ru.krivorukie.foodcountpp;
++
++import android.app.Fragment;
++//import android.content.SharedPreferences;
++import android.app.FragmentManager;
++import android.app.FragmentTransaction;
++import android.content.Context;
++import android.os.Bundle;
++import android.view.LayoutInflater;
++import android.view.View;
++import android.view.ViewGroup;
++import android.widget.Button;
++import android.widget.LinearLayout;
++import androidx.appcompat.app.AppCompatActivity;
++import android.animation.Animator;
++import android.animation.LayoutTransition;
++import android.animation.ObjectAnimator;
++import android.view.ViewGroup;
++import android.view.animation.OvershootInterpolator;
++import android.widget.ScrollView;
++
++import androidx.annotation.NonNull;
++import androidx.annotation.Nullable;
++
++import static android.view.View.generateViewId;
++
++public class FragmentNavRail extends Fragment{
++
++    final Context context = getActivity();
++    //SharedPreferences memory;
++    public static FragmentNavRail newInstance() {
++        return new FragmentNavRail();
++    }
++    private final short amount_of_posts=10; private short[] settings = new short[amount_of_posts];
++
++    private void getNavRailSetting(){
++        for(short i=amount_of_posts;i>0;i--)settings[i-1]=(short)(i-1);// Kostili
++        //TODO get settings from memory
++    }
++    private void setNavRailSetting(){
++        //TODO load settings to memory
++    }
++    short getmax(boolean [] state){
++        short index=0; short comp=0; for(short i=0;i<amount_of_posts;i++)if(settings[i]>comp && state[i]){comp=settings[i];index=i;}
++        if(comp==0) return -1;
++            else return index;
++    }
++
++    void loadContent(View navRailIn){
++        getNavRailSetting();
++        final LinearLayout navRail = (LinearLayout)navRailIn;
++
++        boolean []unloaded = new boolean[amount_of_posts];
++        short toLoad=getmax(unloaded);short counter=0;
++
++        Button b1 = new Button(getActivity());
++        b1.setText("456");
++        b1.setLayoutParams(new LinearLayout.LayoutParams(
++                LinearLayout.LayoutParams.MATCH_PARENT,
++                LinearLayout.LayoutParams.WRAP_CONTENT, 1));
++        b1.setId(generateViewId());
++        b1.setOnClickListener(new View.OnClickListener() {
++            @Override
++            public void onClick(View v) { navRail.removeView(v);
++            } // TODO: scroll the scroll and change the post
++        });
++        navRail.addView(b1);
++
++        while(counter<1){
++
++            switch(toLoad){
++                case 1: break;
++                default:
++            break;
++            }counter++;
++        }
++/*
++        while( counter<1){//toLoad!=-1 &&
++            FragmentTransaction fragTrans = fragMan.beginTransaction();
++            switch(toLoad){
++                case 0:/*
++                                          //pasted code of dynamical button placement
++
++                    Button b = new Button(getActivity());
++                    b.setText("№");
++                    b.setLayoutParams(new LinearLayout.LayoutParams(
++                            LinearLayout.LayoutParams.MATCH_PARENT,
++                            LinearLayout.LayoutParams.WRAP_CONTENT, 1));
++                    b.setId(generateViewId());
++                    b.setOnClickListener(new View.OnClickListener() {
++                        @Override
++                        public void onClick(View v) { //navRail.removeView(v);
++                        } // TODO: scroll the scroll and change the post
++                    });
++                    navRail.addView(b);                                                              // end of button placement
++
++
++
++                    //FragmentPostTest postTest = new FragmentPostTest();
++                    //fragTrans.add(R.id.navRail, postTest);
++                    break;/*
++                case 1:
++                    FragmentPostTest postTest1 = new FragmentPostTest();
++                    fragTrans.add(R.id.navRail, postTest1);
++                    break;
++                case 2:
++                    FragmentPostTest postTest2 = new FragmentPostTest();
++                    fragTrans.add(R.id.navRail, postTest2);
++                    break;
++                case 3:
++                    FragmentPostTest postTest3 = new FragmentPostTest();
++                    fragTrans.add(R.id.navRail, postTest3);
++                    break;
++                case 4:
++                    FragmentPostTest postTest4 = new FragmentPostTest();
++                    fragTrans.add(R.id.navRail, postTest4);
++                    break;
++                case 5: // last in testing
++                    FragmentPostTest postTest5 = new FragmentPostTest();
++                    fragTrans.add(R.id.navRail, postTest5);
++                    break;
++                case 6:
++                    FragmentPostTest postTest6 = new FragmentPostTest();
++                    fragTrans.add(R.id.navRail, postTest6);
++                    break;
++                case 7:
++                    FragmentPostTest postTest7 = new FragmentPostTest();
++                    fragTrans.add(R.id.navRail, postTest7);
++                    break;
++                case 8:
++                    FragmentPostTest postTest8 = new FragmentPostTest();
++                    fragTrans.add(R.id.navRail, postTest8);
++                    break;
++                case 9:
++                    FragmentPostTest postTest9 = new FragmentPostTest();
++                    fragTrans.add(R.id.navRail, postTest9);
++                    break;
++
++                default:
++                    //getActivity();
++
++                    /*
++                    Button b2 = new Button(getActivity());
++                    b2.setText("789");
++                    b2.setLayoutParams(new LinearLayout.LayoutParams(
++                            LinearLayout.LayoutParams.MATCH_PARENT,
++                            LinearLayout.LayoutParams.WRAP_CONTENT, 1));
++                    b2.setId(generateViewId());
++                    b2.setOnClickListener(new View.OnClickListener() {
++                        @Override
++                        public void onClick(View v) { //navRail.removeView(v);
++                        } // TODO: scroll the scroll and change the post
++                    });
++                    navRail.addView(b2);
++                    break;
++            }
++            FragmentPostTest postTest = new FragmentPostTest();
++            fragTrans.add(R.id.navRail, postTest);
++            fragTrans.commit();
++
++            unloaded[toLoad]=false;
++            toLoad = getmax(unloaded);
++            counter++; }*/
++    }
++
++    private int a=0;
++    @Override
++    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState){
++
++
++        final View view=inflater.inflate(R.layout.fragment_nav_rail, container, false);
++
++        LinearLayout navRail =(LinearLayout)  view.findViewById(R.id.navRail);
++
++        Button b1 = new Button(getActivity());
++        b1.setText("№");
++        b1.setLayoutParams(new LinearLayout.LayoutParams(
++                LinearLayout.LayoutParams.MATCH_PARENT,
++                LinearLayout.LayoutParams.WRAP_CONTENT, 1));
++        b1.setId(generateViewId());
++        b1.setOnClickListener(new View.OnClickListener() {
++            @Override
++            public void onClick(View v) { //navRail.removeView(v);
++                ScrollView scroll = (ScrollView) getActivity().findViewById(R.id.scroll0);
++                //scroll.smoothScrollTo(0,300*2);
++                ((Button)v).setText(Integer.toString(scroll.getScrollY()));
++
++                ObjectAnimator objectAnimator = ObjectAnimator.ofInt(scroll, "scrollY", scroll.getScrollY(), 100*a+600).setDuration(200);
++                objectAnimator.start();a++;
++                //TODO catch the position variable from bundle
++                //String strtext = getArguments().getString("position");
++            } // TODO: scroll the scroll and change the post
++        });
++        navRail.addView(b1);
++        loadContent(navRail);
++
++        final FragmentManager fragMan = getFragmentManager();
++        FragmentTransaction fragTrans = fragMan.beginTransaction();
++        FragmentPostTest postTest = new FragmentPostTest();
++        fragTrans.add(R.id.postsCont, postTest);
++        fragTrans.commit();
++
++
++
++    return view;}
++}
++/*
++
++    Animator scaleDown = ObjectAnimator.ofPropertyValuesHolder((Object)null);   // animation of appearance
++        scaleDown.setDuration(10000);                                                 // pasted code
++                scaleDown.setInterpolator(new OvershootInterpolator());
++
++                Animator scaleUp = ObjectAnimator.ofPropertyValuesHolder((Object)null);     // cut down     , PropertyValuesHolder.ofFloat("scaleX", 0, 1), PropertyValuesHolder.ofFloat("scaleY", 0, 1)
++                scaleUp.setDuration(10000);
++                scaleUp.setStartDelay(10000);
++                scaleUp.setInterpolator(new OvershootInterpolator());
++
++                LayoutTransition itemLayoutTransition = new LayoutTransition();
++                itemLayoutTransition.setAnimator(LayoutTransition.APPEARING, scaleUp);
++                itemLayoutTransition.setAnimator(LayoutTransition.DISAPPEARING, scaleDown);
++
++                ViewGroup av = (ViewGroup)findViewById(R.id.navRail);
++                av.setLayoutTransition(itemLayoutTransition);                              //end of animation of appearance
++
++
++        int USERID=1;int countID=0; final LinearLayout navRail = findViewById(R.id.navRail);    //pasted code of dynamical button placement
++        for(int i=0;i<3;i++){
++            Button b = new Button(getApplicationContext());
++            b.setText("№" + Integer.toString(countID + 1));
++            b.setLayoutParams(
++                    new LinearLayout.LayoutParams(
++                            LinearLayout.LayoutParams.MATCH_PARENT,
++                            LinearLayout.LayoutParams.WRAP_CONTENT)
++            );
++            b.setId(USERID + countID);
++            b.setOnClickListener(new View.OnClickListener() {
++                @Override
++                public void onClick(View v) {
++                    navRail.removeView(v);
++                }
++            });
++            navRail.addView(b);
++            countID++;
++        }                                                                                       // end of button placement
++ */
+\ No newline at end of file
+Index: app/src/main/res/layout/fragment_post_total_products.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/layout/fragment_post_total_products.xml	(date 1587043098487)
++++ app/src/main/res/layout/fragment_post_total_products.xml	(date 1587043098487)
+@@ -0,0 +1,12 @@
++<?xml version="1.0" encoding="utf-8"?>
++<androidx.constraintlayout.widget.ConstraintLayout
++    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
++    android:layout_height="200dp"
++    android:layout_weight="1"    >
++
++    <TextView
++        android:id="@+id/textView"
++        android:layout_width="wrap_content"
++        android:layout_height="wrap_content"
++        android:text="Products browser (in total)" />
++</androidx.constraintlayout.widget.ConstraintLayout>
+\ No newline at end of file
+Index: app/src/main/res/layout/pref_main.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/layout/pref_main.xml	(date 1584109923020)
++++ app/src/main/res/layout/pref_main.xml	(date 1584109923020)
+@@ -0,0 +1,11 @@
++<?xml version="1.0" encoding="utf-8"?>
++<androidx.constraintlayout.widget.ConstraintLayout
++    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
++    android:layout_height="match_parent">
++
++    <ToggleButton
++        android:id="@+id/toggleButton2"
++        android:layout_width="wrap_content"
++        android:layout_height="wrap_content"
++        android:text="ToggleButton" />
++</androidx.constraintlayout.widget.ConstraintLayout>
+\ No newline at end of file
+Index: app/src/main/res/layout/test_fragment_post.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/layout/test_fragment_post.xml	(date 1587056148565)
++++ app/src/main/res/layout/test_fragment_post.xml	(date 1587056148565)
+@@ -0,0 +1,40 @@
++<?xml version="1.0" encoding="utf-8"?>
++<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
++    xmlns:tools="http://schemas.android.com/tools"
++    android:layout_width="match_parent"
++    android:layout_height="200dp"
++    android:layout_weight="1"
++    android:gravity="start"
++    android:orientation="vertical"
++    android:visibility="visible"
++    tools:context=".FragmentPostTest">
++
++    <Button
++        android:id="@+id/button"
++        android:layout_width="match_parent"
++        android:layout_height="wrap_content"
++        android:layout_weight="1"
++        android:text="Button" />
++
++    <TextView
++        android:id="@+id/textView6"
++        android:layout_width="wrap_content"
++        android:layout_height="30dp"
++        android:layout_weight="1"
++        android:text="TextView" />
++
++    <TextView
++        android:id="@+id/textView5"
++        android:layout_width="wrap_content"
++        android:layout_height="30dp"
++        android:layout_weight="1"
++        android:text="TextView2" />
++
++    <TextView
++        android:layout_width="wrap_content"
++        android:layout_height="30dp"
++        android:layout_weight="1"
++        android:gravity="start"
++        android:text="Hello" />
++
++</LinearLayout>
+\ No newline at end of file
+Index: app/src/main/res/layout/fragment_post_plan_a_cafe.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/layout/fragment_post_plan_a_cafe.xml	(date 1587043098542)
++++ app/src/main/res/layout/fragment_post_plan_a_cafe.xml	(date 1587043098542)
+@@ -0,0 +1,12 @@
++<?xml version="1.0" encoding="utf-8"?>
++<androidx.constraintlayout.widget.ConstraintLayout
++    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
++    android:layout_height="200dp"
++    android:layout_weight="1"    >
++
++    <TextView
++        android:id="@+id/textView2"
++        android:layout_width="wrap_content"
++        android:layout_height="wrap_content"
++        android:text="plan to go KFC instead having a dinner while busy" />
++</androidx.constraintlayout.widget.ConstraintLayout>
+\ No newline at end of file
+Index: app/src/main/res/layout/fragment_post_fridge.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/layout/fragment_post_fridge.xml	(date 1587043098247)
++++ app/src/main/res/layout/fragment_post_fridge.xml	(date 1587043098247)
+@@ -0,0 +1,12 @@
++<?xml version="1.0" encoding="utf-8"?>
++<androidx.constraintlayout.widget.ConstraintLayout
++    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
++    android:layout_height="200dp"
++    android:layout_weight="1"    >
++
++    <TextView
++        android:id="@+id/textView3"
++        android:layout_width="wrap_content"
++        android:layout_height="wrap_content"
++        android:text="What's here?ah?.. Nothing?..(" />
++</androidx.constraintlayout.widget.ConstraintLayout>
+\ No newline at end of file
+Index: app/src/main/java/ru/krivorukie/foodcountpp/FragmentPostTest.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/java/ru/krivorukie/foodcountpp/FragmentPostTest.java	(date 1587052741963)
++++ app/src/main/java/ru/krivorukie/foodcountpp/FragmentPostTest.java	(date 1587052741963)
+@@ -0,0 +1,27 @@
++package ru.krivorukie.foodcountpp;
++
++import android.app.Fragment;
++import android.os.Bundle;
++
++import androidx.annotation.NonNull;
++import androidx.annotation.Nullable;
++//import androidx.fragment.app.Fragment;
++
++import android.view.LayoutInflater;
++import android.view.View;
++import android.view.ViewGroup;
++
++public class FragmentPostTest extends Fragment {
++
++
++    public static FragmentPostTest newInstance() {
++        return new FragmentPostTest();
++    }
++
++    @Override
++    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
++                             @Nullable Bundle savedInstanceState) {
++        return inflater.inflate(R.layout.test_fragment_post, container, false);
++    }
++
++}
+Index: app/src/main/res/layout/fragment_post_carts.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/layout/fragment_post_carts.xml	(date 1587043098197)
++++ app/src/main/res/layout/fragment_post_carts.xml	(date 1587043098197)
+@@ -0,0 +1,13 @@
++<?xml version="1.0" encoding="utf-8"?>
++<androidx.constraintlayout.widget.ConstraintLayout
++    xmlns:android="http://schemas.android.com/apk/res/android"
++    android:layout_width="match_parent"
++    android:layout_height="200dp"
++    android:layout_weight="1"    >
++
++    <TextView
++        android:id="@+id/textView9"
++        android:layout_width="wrap_content"
++        android:layout_height="wrap_content"
++        android:text="saved carts or carts you did not complete" />
++</androidx.constraintlayout.widget.ConstraintLayout>
+\ No newline at end of file
+Index: app/src/main/java/ru/krivorukie/foodcountpp/dummy/DummyContent.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/java/ru/krivorukie/foodcountpp/dummy/DummyContent.java	(date 1586865603414)
++++ app/src/main/java/ru/krivorukie/foodcountpp/dummy/DummyContent.java	(date 1586865603414)
+@@ -0,0 +1,72 @@
++package ru.krivorukie.foodcountpp.dummy;
++
++import java.util.ArrayList;
++import java.util.HashMap;
++import java.util.List;
++import java.util.Map;
++
++/**
++ * Helper class for providing sample content for user interfaces created by
++ * Android template wizards.
++ * <p>
++ * TODO: Replace all uses of this class before publishing your app.
++ */
++public class DummyContent {
++
++    /**
++     * An array of sample (dummy) items.
++     */
++    public static final List<DummyItem> ITEMS = new ArrayList<DummyItem>();
++
++    /**
++     * A map of sample (dummy) items, by ID.
++     */
++    public static final Map<String, DummyItem> ITEM_MAP = new HashMap<String, DummyItem>();
++
++    private static final int COUNT = 25;
++
++    static {
++        // Add some sample items.
++        for (int i = 1; i <= COUNT; i++) {
++            addItem(createDummyItem(i));
++        }
++    }
++
++    private static void addItem(DummyItem item) {
++        ITEMS.add(item);
++        ITEM_MAP.put(item.id, item);
++    }
++
++    private static DummyItem createDummyItem(int position) {
++        return new DummyItem(String.valueOf(position), "Item " + position, makeDetails(position));
++    }
++
++    private static String makeDetails(int position) {
++        StringBuilder builder = new StringBuilder();
++        builder.append("Details about Item: ").append(position);
++        for (int i = 0; i < position; i++) {
++            builder.append("\nMore details information here.");
++        }
++        return builder.toString();
++    }
++
++    /**
++     * A dummy item representing a piece of content.
++     */
++    public static class DummyItem {
++        public final String id;
++        public final String content;
++        public final String details;
++
++        public DummyItem(String id, String content, String details) {
++            this.id = id;
++            this.content = content;
++            this.details = details;
++        }
++
++        @Override
++        public String toString() {
++            return content;
++        }
++    }
++}
+Index: app/src/main/res/values/dimens.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/values/dimens.xml	(date 1586865603479)
++++ app/src/main/res/values/dimens.xml	(date 1586865603479)
+@@ -0,0 +1,4 @@
++<?xml version="1.0" encoding="utf-8"?>
++<resources>
++    <dimen name="text_margin">16dp</dimen>
++</resources>
+Index: app/src/main/res/drawable/ic_delete_black.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/drawable/ic_delete_black.xml	(date 1587151770383)
++++ app/src/main/res/drawable/ic_delete_black.xml	(date 1587151770383)
+@@ -0,0 +1,9 @@
++<vector xmlns:android="http://schemas.android.com/apk/res/android"
++        android:width="24dp"
++        android:height="24dp"
++        android:viewportWidth="24.0"
++        android:viewportHeight="24.0">
++    <path
++        android:fillColor="#FF000000"
++        android:pathData="M6,19c0,1.1 0.9,2 2,2h8c1.1,0 2,-0.9 2,-2V7H6v12zM19,4h-3.5l-1,-1h-5l-1,1H5v2h14V4z"/>
++</vector>
+Index: app/src/main/res/drawable/ic_create_black.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/drawable/ic_create_black.xml	(date 1587151724534)
++++ app/src/main/res/drawable/ic_create_black.xml	(date 1587151724534)
+@@ -0,0 +1,4 @@
++<vector android:height="12dp" android:viewportHeight="24.0"
++    android:viewportWidth="24.0" android:width="12dp" xmlns:android="http://schemas.android.com/apk/res/android">
++    <path android:fillColor="#FF000000" android:pathData="M3,17.25V21h3.75L17.81,9.94l-3.75,-3.75L3,17.25zM20.71,7.04c0.39,-0.39 0.39,-1.02 0,-1.41l-2.34,-2.34c-0.39,-0.39 -1.02,-0.39 -1.41,0l-1.83,1.83 3.75,3.75 1.83,-1.83z"/>
++</vector>
+Index: app/build.gradle
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/build.gradle	(revision 7bb59c4c2aec8a212487c2f34939a5bb4fb65669)
++++ app/build.gradle	(date 1586865604067)
+@@ -23,6 +23,9 @@
+     implementation fileTree(dir: 'libs', include: ['*.jar'])
+     implementation 'androidx.appcompat:appcompat:1.1.0'
+     implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
++    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
++    implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
++    implementation 'androidx.recyclerview:recyclerview:1.1.0'
+     testImplementation 'junit:junit:4.12'
+     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+Index: app/src/main/res/drawable/ic_search_black_24dp.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/drawable/ic_search_black_24dp.xml	(date 1587151844856)
++++ app/src/main/res/drawable/ic_search_black_24dp.xml	(date 1587151844856)
+@@ -0,0 +1,9 @@
++<vector xmlns:android="http://schemas.android.com/apk/res/android"
++        android:width="24dp"
++        android:height="24dp"
++        android:viewportWidth="24.0"
++        android:viewportHeight="24.0">
++    <path
++        android:fillColor="#FF000000"
++        android:pathData="M15.5,14h-0.79l-0.28,-0.27C15.41,12.59 16,11.11 16,9.5 16,5.91 13.09,3 9.5,3S3,5.91 3,9.5 5.91,16 9.5,16c1.61,0 3.09,-0.59 4.23,-1.57l0.27,0.28v0.79l5,4.99L20.49,19l-4.99,-5zM9.5,14C7.01,14 5,11.99 5,9.5S7.01,5 9.5,5 14,7.01 14,9.5 11.99,14 9.5,14z"/>
++</vector>
+Index: app/src/main/res/drawable/ic_arrow_forward_white.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/drawable/ic_arrow_forward_white.xml	(date 1587151897325)
++++ app/src/main/res/drawable/ic_arrow_forward_white.xml	(date 1587151897325)
+@@ -0,0 +1,5 @@
++<vector android:height="24dp" android:tint="#FFFFFF"
++    android:viewportHeight="24.0" android:viewportWidth="24.0"
++    android:width="24dp" xmlns:android="http://schemas.android.com/apk/res/android">
++    <path android:fillColor="#FF000000" android:pathData="M12,4l-1.41,1.41L16.17,11H4v2h12.17l-5.58,5.59L12,20l8,-8z"/>
++</vector>
+Index: app/src/main/res/drawable/ic_arrow_forward_black.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/drawable/ic_arrow_forward_black.xml	(date 1587151885051)
++++ app/src/main/res/drawable/ic_arrow_forward_black.xml	(date 1587151885051)
+@@ -0,0 +1,9 @@
++<vector xmlns:android="http://schemas.android.com/apk/res/android"
++        android:width="24dp"
++        android:height="24dp"
++        android:viewportWidth="24.0"
++        android:viewportHeight="24.0">
++    <path
++        android:fillColor="#FF000000"
++        android:pathData="M12,4l-1.41,1.41L16.17,11H4v2h12.17l-5.58,5.59L12,20l8,-8z"/>
++</vector>
+diff --git app/src/main/res/mipmap-xxhdpi/ic_random.png app/src/main/res/mipmap-xxhdpi/ic_random.png
+new file mode 100644
+index 0000000000000000000000000000000000000000..c9522af1a45e1a80db15a0375a6ad5329256123c
+GIT binary patch
+literal 2514
+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
+
+diff --git app/src/main/res/mipmap-xxhdpi/ic_next.png app/src/main/res/mipmap-xxhdpi/ic_next.png
+new file mode 100644
+index 0000000000000000000000000000000000000000..f62bbe54e32ee81023cd61f4544872b71d82d6a3
+GIT binary patch
+literal 1642
+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
+TYUU?5{ULxt+DNQlyFKr3Bsk$Z
+
+diff --git app/src/main/res/mipmap-xxxhdpi/ic_random.png app/src/main/res/mipmap-xxxhdpi/ic_random.png
+new file mode 100644
+index 0000000000000000000000000000000000000000..e9ff9c8cb2d3b97a60f3c3680e6f8f2c9ecce7e8
+GIT binary patch
+literal 3619
+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
+
+diff --git app/src/main/res/mipmap-xxhdpi/ic_back.png app/src/main/res/mipmap-xxhdpi/ic_back.png
+new file mode 100644
+index 0000000000000000000000000000000000000000..0726314c267654d611b5f610727a50e91da33248
+GIT binary patch
+literal 1496
+zc%17D@N?(olHy`uVBq!ia0vp^6F``Q4M;wBd$farfpxy8i(^Q|t+zM5Jz~OTju)27
+zxC^fhP2OmCARt+Kv8R-{>DH~6S|8kt$gCAPc>Guw_u3snjy3u+g7F>wQ@ehMO@Fuh
+zq)}^7RFu$*eV!{8-~0Ff@J@r2i$PxRocGoLC@eH(ub*FiPO`T<S)wfw9X+$}O^y86
+z+}zB0`}S?dM{!%2-ySm0ICt)xQ0c`zPWPnVy6pa_qZWHd+Ft$r`}g89a&q_VY;AQ_
+z&bilrztvdw(LZ*l-LBAE+}4(sKfnF>@x$fQ<|qCqcRta7<aN%M{npXWvgF4btv~a~
+zUHsRo^J(UhO~oZ8E;f^9#LavA_HAf2)5N_Dkq^ubGnAwlOEu4HKdSQ)zZmyMyt=q}
+z^UY9~Z(%EDC6~<qysg^0$+O=yyS)5*RAl7J!l!;I_n(N1i#KmtA%F0(z00pVH*WlR
+zd2+J4=Ek{JJAWVPespa{a(B_6QuVH!+}y~A1wX9c2AMOv|6iui-{4`#Iw4<p;`$%g
+z{`~nfvt*`*b>M-MkG1!$U$5`W@OM$e8P(pPKczjc*3ofs|MqU%W)^K-`b1)L`TWk#
+zPU}q#)6*Qor##vn^YZlmZQH)BTD<siW7(?{dMXWH{!O+pGb_`7_JV1`|FQ)d3%-8+
+z>QP<&Tm9Bbn`S>oE<S$#=|^imGfn7c+`4U>-8Da1#uPgh69a<}0uI-i1H8SxmzHU{
+zM@&j?`1Sj@J==w^3|H>l`6JoTv7SMd`Nb_pFE#;2Fl=C8QD6c?21X7C7BFOBf(wHL
+zfn5A*IlvGo2@{@zTZJGPLQF;1hFh%?7($$dRoDd#K}K~jfFQ*DJ4{z@-~R0(Cd4>l
+zKjYf9Yh9(JrR~dk0!m9u7u7|ChhJxoJmJmoQ~JWGQ>Rw%+O^An>*Y_MK0SzLSMg&0
+zl{j_k)SbV7|K30IXiQModj?nQ*>mUC1_lKMEtxy(?8CMGPIYy4T{fGyZQp*rM39}G
+zT^tmXZ{EF&TD*9%y~p(JKFc}#7*?%ZxpQU1vgOP7i`%S{boh6xc2UEVf61lg<^5UH
+zH~n5>#j3Gy#R?6T^F43gys<9o{(n`WE1)m`gUgd&iM{>(_UBKX+O;}XOiWBIdwU<l
+zB$n>(?);OR7XYm&E-f|PW#F13=3&$0u7Cbv!Hukpj29RAe5X6AGrmmKHZ?Xjj-Pkb
+z*49>;o11&uyp_95v%XAPW?uWKGv?ObH*eoY0u@Z#^JDU@xg`+`VrK!9kVyJDue+Z%
+zUAlbPe!}y;%a$#hck<-P=byG-xOMYpXIJ>kBhnYANAH%Dl&lPlkH5cs?#y?ae5P|2
+z^7-w#`6(pNFDmMm`zIaYv;EfA*6D3+ZS(wmeg7Jon}4s$%zWu2q`2-$QeEA@t!0K5
+z7C*MEU8}1j`|^IxDW7!9Wrr6`-tGTJZ^`tR<*Jp>jKZXN*yO$Bo<4nA8yOfF7#|w?
+z)wEFm(!uasttCP0?q;|zTWxbW_QcD(>Sf|wGv4}(Pm<<p?J_bl@|rwp(!0~=zw@d+
+zD%!#gEN?FMZPC6Qx#^{W-MOWmu3!38q8Ew3zP;%Jf9l2Z;NW2I&gzSNOS+TZ9x0ie
+zyQ@g{{Opb|@`dJS9(_srHqSEozWGVjzGMIPKA)ktWpc^oz)9gBjwo$XWIelcR+3ot
+zWtFKGQop~~9WD_xy33OE>(iYZ+};M90{%zd9o}5<k5{D7oae9s0)5{9EMK<jwo=x?
+S&p&`AHiM_DpUXO@geCxT{*5sJ
+
+diff --git app/src/main/res/mipmap-xxhdpi/ic_edit.png app/src/main/res/mipmap-xxhdpi/ic_edit.png
+new file mode 100644
+index 0000000000000000000000000000000000000000..4e7f3d36620fd849c69b556290b447779da1de6a
+GIT binary patch
+literal 1873
+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
+
+diff --git app/src/main/res/mipmap-xxxhdpi/ic_next.png app/src/main/res/mipmap-xxxhdpi/ic_next.png
+new file mode 100644
+index 0000000000000000000000000000000000000000..97aed101ad33ca5315db304bee0643ee53806efc
+GIT binary patch
+literal 2365
+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
+V?fjGFX83Ipur?=}Rh#%E{0$S|;f(+Q
+
+diff --git app/src/main/res/mipmap-xxhdpi/ic_delete.png app/src/main/res/mipmap-xxhdpi/ic_delete.png
+new file mode 100644
+index 0000000000000000000000000000000000000000..c72a0341b0836bcf6f227be4880e7813f58bbe0c
+GIT binary patch
+literal 1781
+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
+Un;d&Yt@51#Xg4gf+{ORWpIBrco&W#<
+
+diff --git app/src/main/res/mipmap-xxxhdpi/ic_edit.png app/src/main/res/mipmap-xxxhdpi/ic_edit.png
+new file mode 100644
+index 0000000000000000000000000000000000000000..6cb2aa9d77b2380ce2a17e0ee788817ccabe5c41
+GIT binary patch
+literal 2654
+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
+
+diff --git app/src/main/res/mipmap-mdpi/ic_random.png app/src/main/res/mipmap-mdpi/ic_random.png
+new file mode 100644
+index 0000000000000000000000000000000000000000..06f715417f2f5b2710c7de04ee05e0063204044d
+GIT binary patch
+literal 845
+zc$@)E1G4;yP)<h;3K|Lk000e1NJLTq001xm001xu1^@s6R|5Hm0009NNkl<Zc-rlm
+z&1)J#7{+6bQWd<kL<_B0p|WW87Vsh>Eiso8$VJdYPB9>oM1_Et=po6)Kmq~3R*aYU
+z72@~Zf2XufnjUiq)AtSTq7sdU)}4VYJWRlOGS6>!K6Z8%7G5rjuUf4p@AZ0%QVKK7
+z96XUoyh71(BWKDpSg~HOzv*;3hGw(*K?-5pnBlQ(6T^d1-R*W$P=1H<T1sJtcDs#P
+z)K5YPKY}3x211jn)hZ9sWMct@!BQ%f-h$x=np&;a9l+c}DT(@R-(i-^%gdjKhllS5
+zvkqN2;<3zRGM~WoyAN<L^_>?o0Kjc57PAayeH7s6=*SGF8yW$^;jndD04krr_V)JY
+ze+IzwJh9nqQ_JaelGW8!5(orHE|-%Y;Oy*-K=o(K<#G`ijO+rS@X5eTLkGas)z#P#
+z_**ucC6P#k7z~CXUoaS?A7B*5Y&MHNqtVC~0P5i2K=jFEGEy#=*#f9kDns5>D#aE6
+zPNRd~^Ye4I0Q`Qx=+kPo6K5jo0OIjDQ7V<9Z*6UjjzJs>g~;yi?xWh;+9K=g>xARD
+zA<xp%(!>Ew^+JZzXFi{2YbD06gRAe(&JKYsBVF%8qg@CZBOZ@O?C)~9oNR1t;QyrK
+zZFJf}3>ze()9J)|%gf88(P*#(fJ&#+M5ED&b=__^TL7qNG&)otyBJddD2Kx#)>o-i
+zq);fZ1yC#&iCV1|JqW}U0BUn{bI7;9zt0u`PNOE1N%ZOU`iWjDU*?j@<ikEd@Or&o
+zwg6BoD=VT`p-?<*Ip+$1b2~0jf@TFMl}Zo$W5JKB_FMs&|FHD}@Sg$L{kVI4e9Y1M
+z1OUJ`7C<;O*xTEC51Wl&G#zksyIuSgbM5o_O#PFj#Ysm@uX&!Y;f@K72!f>)657Tr
+zr>CcN$fla+j7)B^Sga=}C#{Q%i<@e-`UmK5v7D!bHetQEfo|RAI1amyeA<&r73ibg
+zZvO%+<~NtiC5f<Y*h7ECEKlD3Q3$Kms)Ro^Ag#pGV3ubcyyIYjcNB$`8arTLE=sPy
+XO^38A8~-v)00000NkvXXu0mjfD07hC
+
+diff --git app/src/main/res/mipmap-mdpi/ic_delete.png app/src/main/res/mipmap-mdpi/ic_delete.png
+new file mode 100644
+index 0000000000000000000000000000000000000000..673e319f4d02a32ff5a874ac5788dfedbf04b94e
+GIT binary patch
+literal 642
+zc$@)(0)737P)<h;3K|Lk000e1NJLTq001xm001xu1^@s6R|5Hm0006>Nkl<Zc-rlm
+zziT2v6vvY@CrK94+<_eA0y(&#?rCjj;bC`wfcAowU?bYuXeDZOD7Lz|{#<o?|DEHK
+zn50Y*=H3@v@Dg=*&FXA117Dutyf@#^?#veRj*i4|@#yt>p80%!!c*{I+jy~9`~bP-
+zLE7@OI&m}_eVWZ?SDL1M<sqyM59_>bHBX7>x~~7G_=n;>Pr<`<I)#^WQwZZvN@!35
+zbCXn6ZIQL(jR3}BQ55AfCHzIwWHNasm=}s%v|RfcUi$t1ZK+iHvg-A}ffJ9|Xf(c4
+z(!&zqh4+&;JP^QRp->2}dR+@pE|+g8X|W5ycsyp5zg3vCD?m1zm8}BUegiNTi9{Hc
+z*ecAi1F;H_$z*=K8-Vs7i^XDZ6bJ-N%^Skpbv00X?*Q#~+p<x+LTv$H1~3>5SR#?w
+zi%@&-06agVjsm1oDdzL}91&_A900G}slAU{0zd!=00AHX1b_e#00KY&2mk>f0IUL}
+z(`m;5Q0w3TtyYV9z20}5M-9|EH~^H-=b0o)JDW!?YV6}y!t&+ra5!YuYSr{o_qC9N
+zT*ohWE0v1ht@lC%5ZVY}G!1gO+@+>zcW!EM=(^6j-R^xdnf$iwB%N$)F`d$(>JbD(
+zB0vy%$XFX*>h=1Fyq#I;k$Hl_pj@lfCY?@ap{nW=(LW*{QpTE!qAX}zPyK#BwvWeZ
+zr}B(+9S(<M@p$}KG#ce1tQ`u4e!`3C(|-*i%d(e#N~8<UlHg^h#ybv6v)TN}QyUMg
+c7%mzA0NXKBzK_GCO8@`>07*qoM6N<$g7{1*-2eap
+
+diff --git app/src/main/res/mipmap-mdpi/ic_back.png app/src/main/res/mipmap-mdpi/ic_back.png
+new file mode 100644
+index 0000000000000000000000000000000000000000..4e26aef1ae1ca39570c1a608fff3906f75e5cd65
+GIT binary patch
+literal 489
+zc%17D@N?(olHy`uVBq!ia0vp^1|ZDA1|-9oezr3(FmCX4aSW-r^>(JM_u&MA<Ez&u
+zMHgIj4RCbi?0gyiVnNDh?kCP7yF_-CdM<ac@^pIErq()P$<5!TF1c%x+lAgQXw;|`
+z{ZiRt{iC??$&UZ;D<g|qnOKiMtc)wPk((aDW&0*)&*hhI7FR@`nEU66{g>MRDJD{}
+zY>ov7oo-0m>U`dI%|;~bkwsn8AD+rXK`#`$l)ePr<e0d(g-MtzXx@`u>v*qy3u8)|
+zezb5-utvqfMFu?S494weT)OWWe=(Bbi#PSPK3)A+sN%8V>}8eAuJ5@UEMHGOZ^Lk4
+z%iX;0%JtriyY9Zz6;ZWeGMVk08O@+qzTjfU9YF?00o>@1(t-bfcdmZD>%eP1hK4;t
+z3er+rqSk&^;J8;IRdA$m4j)@{=c-lLyFG(4?{>UAu`QQhAxOtX;Ec|cuWtH#<Ic0^
+zKg~@`aSaqvJ#28OZvXrp>wYtS2|iQ5a?SF`7MwD#Jp@>6?2hKDPffiLx;AWgxX9Cu
+zaqEo*zfDX1$+$Ns=I?ufNh-33l0{3-M1+3%wD_QPoY?72d=XhsTbDjiv17aymd9o@
+T_sS(;6f$_a`njxgN@xNA<HpWq
+
+diff --git app/src/main/res/mipmap-mdpi/ic_next.png app/src/main/res/mipmap-mdpi/ic_next.png
+new file mode 100644
+index 0000000000000000000000000000000000000000..d43ea0f8f3ad90e26c26ad7f37be53d25e94e4a4
+GIT binary patch
+literal 558
+zc$@()0@3}6P)<h;3K|Lk000e1NJLTq001xm001xu1^@s6R|5Hm0005?Nkl<Zc-rlm
+z&uYRz5XRfama5Q8dnvSq23kVW_zE6Uy!8RpcMv=%c=MtsK~Gi5*`N_Z5_9);N?WZx
+zdXRJmOi_vdigmNH3m+rVVZPsHSJ%wZ5gP#>x~_Bmem_J~=wWN)#bWUU6_knG%FpZv
+z4a2zX^?G-vY2K0$)<zG0-d382#E9cKuMpoL4oC_;*tU&cB5NVMHzA<`32u<o>2y@E
+zcDxk8+bo)<T|vS-CRvs>2ABy%BAV77qnB>C`%x;Du4lc@4cze<8;!;TBz;W*CZuQH
+z^8f&&LZKkedi4b;m&=ckGz=m@Hk*|;1qkFF$Ye5441fVJ00zJS{Ei891EkYwH<!!N
+z3y@4EU5?{?A*ca>(!LN>0r)}e1fX88yNaUxn|Pl81z3dG2>@K1E3glF5DefTmJs!u
+zn0<{N`VSfPM+xc=bL{^B17H9Q;P3$GeYjhxRD_`30RWJf0(eb>d_I3;n&xMa8XS(}
+zxb1d(kV>WaX(uVPs>O7!s;UkUE+!%fMiTOBqnBE(W`MWwCOtAv6h*08ty-;CYY69*
+zZ=fGx+^4*nnx+k5S=)jj;PT-%?No+A_pw+^NhA_4@pznwu(mAA&*)|C>@Pw{l5_?y
+wqo51IilUc4HQsTvG@H#+l3Kc9*$Bw^0n>MP-*s265dZ)H07*qoM6N<$f<xr?7ytkO
+
+diff --git app/src/main/res/mipmap-mdpi/ic_edit.png app/src/main/res/mipmap-mdpi/ic_edit.png
+new file mode 100644
+index 0000000000000000000000000000000000000000..272ffe915fc74da1e2994ca439e703beb8952e3b
+GIT binary patch
+literal 687
+zc$@*R0#N;lP)<h;3K|Lk000e1NJLTq001xm001xu1^@s6R|5Hm0007ZNkl<Zc-rlm
+zO-lkn7{^n$=momeC8?mG5I6k_3Wc}6fOoHo7r~nsJ&Ae>Ul6>wxQeps-u*h!i`B71
+zY|j%;Y_hwqwexal;LnKe!~A}`Gb8M5Z2UKYTfg5A%w{u*XOLlS@Is;B$B1$x*Wxi>
+zI2w%(rqk)ErfDZUf@33t6`LbG6z=M}eh2+M^v^tl43o(OS$0=SkRPF-4h4otQB}1C
+zXg*s3vRD*FIfQ}-EE<o;?;!I5J(n!Ten*zUVDMNh7LUxVKN_xh?CbUV1r)t31U`7*
+zdBOk!ulamFY-Y6-D3wZ=P&8*H&}=r1cDwCLAe+s~ZUvY;fmAAG`2BuEk|ZOO$*dGe
+zr_)!$2p~KR_Z^?lXDK11z%sm(gpdO9c-&IJN<t`s;c!Tx93^l~kcBOb08X1=Flcl-
+zos|;!6mWMEM!-Dh-ALf|!b~Bn1?wbXhUYF|x7*lBEW>jZaDumzaPv>hOu!AiS%U0N
+zLI|t_Z#Cz+3V03ARDcFNGXYxgOay4cQx~8OPgQ^gJT(DU@Kgj?!h0^j8s1X@9`K$C
+zR4NrN@SX|4cU<6^3wRCBRDcFNGXYxgOay4c|3%=(%iUhD_a(6$+?`myop$wdw_GlV
+zM18#u0ufsQa%hmt<&HH?dlKn@L)Uej1<%Q3@_ccUBsm>1ZMRyjK1di?h$7hY2pJn$
+zYPH%3*mm5Ukp;rxuw1QH$K7ssuBz%A*uP@WGGt6eQRXnMC!tUXr%%A`N#zdYEE<ho
+zClZO<SS-dRICdlwxj~kdcYj$zmgOz@xChzioIPau)xkS1mPVto$uqVK_P+_zJ^}2r
+VGfaJit=<3t002ovPDHLkV1lSkF$(|y
+
+diff --git app/src/main/res/mipmap-xxxhdpi/ic_back.png app/src/main/res/mipmap-xxxhdpi/ic_back.png
+new file mode 100644
+index 0000000000000000000000000000000000000000..67c49aa2d5f8014647c7c06caadbecbb121d008b
+GIT binary patch
+literal 2191
+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
+F{{(Yzpi2M%
+
+diff --git app/src/main/res/mipmap-xxxhdpi/ic_delete.png app/src/main/res/mipmap-xxxhdpi/ic_delete.png
+new file mode 100644
+index 0000000000000000000000000000000000000000..ad2c6f305c874fe2a7980f9eefbb3307f1e462e9
+GIT binary patch
+literal 2547
+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
+WtM~VY^%}naXUKCXQ-aC$dw&9Tl3m^a
+
+diff --git app/src/main/res/mipmap-hdpi/ic_delete.png app/src/main/res/mipmap-hdpi/ic_delete.png
+new file mode 100644
+index 0000000000000000000000000000000000000000..4f25766bdfe1ff3a970da6bbd47bdafa14bb7c59
+GIT binary patch
+literal 888
+zc%17D@N?(olHy`uVBq!ia0vp^9w5xY1|&n@Zgyv2V7B*kaSW-r^>&VLwp5@<o9yZ(
+zYiH{?&F<n>G~p;q?CIuk@}0i*G@JRs)CH>@6lUisaTvBniS}Ge$dUfYZ67dsjqYE@
+z)-Uf<3ajHh9lUP8SRwrWsZ7Ppvv-Q${XSEg)>3>t<<SEmm|)!^5VimQ_7y4>v$*DD
+zm}G^0J>>r;*W%#MpFgvM-aLBrNciRBr%zLz)Dq9lu(mmH`pASl_MlCwUU!x+4)FQw
+zwRF=G?n@uuPZp|mKNPpVeC?zMD=%jJQRseVZ+l;IN9V&EdE4*bITTpH8avs(u%_lu
+z*^SQ@4JJx|977#GTzOgIqBq_9@M<}SXH|RW1xp5Ozb$$*XB)@*Du&1xYTqiw8ZuJ5
+zHgDcMvGsF0tH$J$HI3o14XdtZ)!k}Hs3<ND-Vw77C}o)Eru|}dp2L<Vzh#^&0yH?*
+zU)TO{K_XnD{o`de7xS0-Z45v?N<y7~f^Xlxos^sF8=)f>+hD-=c;fT=QiJ}TEG?^7
+zAOEq%^p#e!1CNK1!_lNb9UYxJyFpS{vbG*Mc<|s}?$0y49X9Rrl;-33pP#gG#*Mpo
+zO?_6h?+RkbGMk;0oa`L2HtcXq)e3E1h56^xUrgryDj~p}<iOLxXsEz;q=7I;lbPeK
+zdZWXE0EZRkS+`Hel$5s|PF$EdOR*q;{p*sK?;3(uPARaEX=8Aby)t>3J%`i7y?bpF
+zH{VR-V*eQkRKZkYoK}$Pyl_In?z_pQ*Y2x6agKZ9F1ym|%s)1+vv(iAIlIIA#B%X7
+zA&gT`Ki%`nwri$OTHUuSjq67uwWbEG%3tBFBBZ{H@#2FM7wST%KH%Awk|clY-@kv>
+z6=$D+zE)`d)lR|I+Sc}O<!6b|Oy~Cxo=^2#zW&5w=D6ekE*!XaO^iYJ*WZ8BOO$u7
+zy8gO(d#K8^$PWzqCsRI6zy7+Gwf|tkg``Wue#<{A%Dz!Kf9~A5-x(%Rc2-tdvT|}}
+zk3Loet6kh94N70!HV38mcG}N+@|b(p-Mo6A<EfX5C(ZuiRJ1dHkIm8z2Ol4~zat_(
+zetVV8yrWmIUR^qM>Qr?jZn+1n^U^-r3it{Z78DeC2<~UpxM{v*!J)pdz#PTk>FVdQ
+I&MBb@0RE1oFaQ7m
+
+diff --git app/src/main/res/mipmap-hdpi/ic_back.png app/src/main/res/mipmap-hdpi/ic_back.png
+new file mode 100644
+index 0000000000000000000000000000000000000000..eeb8cf434c3ddf414eac992c702822d32e3a7397
+GIT binary patch
+literal 618
+zc%17D@N?(olHy`uVBq!ia0vp^9w5xY1|&n@Zgyv2U^4V{aSW-r_4dy0EG9=0wggkI
+zohD+Fx+6G*q=P%c!X{2pOw9@As$`fQ!p&$ZklYfwI6?1()@ijzTklO^=a_MQ<BU1V
+zf-1fRSCiELHy#eLKJ(ww&-`)0f&dMXQ}<L`3T7>PIc=roWv>De*TR#(4(rd&t!p}%
+zP~cT-E5rAGMZWvuz=M8gv!87(W;?gZ<kB1GS!djZXPa=Hyp^*x%Ff&4^MC(YFXpPh
+z`TkpY<}72$wvUd2vHOkxN7i(Fyz#Q+T$+W@y9Jz2g`XDvtg-v7<lrZ?Z=z_2ap~^Z
+zz_nrCbFOkt@V@?a)ftDqasDA%Q{B&Hv7Yd4ztQ~0Vbv<T!Z2@#w`IG(@t0lLoT_lk
+zvGiu+iwSj%0u2l-3Ji=K4h&3WF|`>lnfU(NEwyUZqjkq_l?80Rxo7%cr`Ux7E27yJ
+z_3J--xB66z@!m<95^X0^jHb`o8n(JpZ10ubj<pvuOzbMPKeY(OzL@)Ouh-H`GmO|Q
+zULWG;T@s|p_DM~sGui6Iv0dx9?@hAVICr*j!L+1}KSaBa`dK6!%`CBA6Jj87XURc-
+zS>NTC!@Cw`{H*z>JNvBE&X{*s{d`}WRlJ?kxVb>>oEQhowrQ0$2VZ{wy*=~Ja=Rsc
+z0rEHZDBDMVTTy25_)>n%k;jGpCQ@J94kyNIh}_y*42+jUGp~J=>j<9YwlF{=`il86
+X{<4dc_?ou>(-4EFtDnm{r-UW|HW3D~
+
+diff --git app/src/main/res/mipmap-hdpi/ic_edit.png app/src/main/res/mipmap-hdpi/ic_edit.png
+new file mode 100644
+index 0000000000000000000000000000000000000000..c6a9c92101db0b6e24c31929138da40ca781ca50
+GIT binary patch
+literal 1265
+zc$@+81P=R&P)<h;3K|Lk000e1NJLTq002k;002k`1^@s6RqeA!000EINkl<Zc-rlp
+z%S#(U9Dp@Ou&qiFX{&e;L=oGA#*=uc7DOmL)@yyo*IALG5-F&KS}R1Yf_?Z7@%=cb
+z^baVs|4t9n`J|E6Mzh(ho7w3O{0Im;?(ds#W`67|E6ZzM^P1PZ=I$nh$d1Kgew~7x
+zY=ILBg?zdWeA>AgJ2*Kxc`oD4>FMcv8Sl={&Su>doHOT64&;(Hr1*idvtrqCO#TYZ
+zBDS@)Rcr~8aem5<zR}_F@$qk+f}En!=y#c-?`qCT8;cmf`}_MZ;&3!H=(o&IEG#U%
+zH0GQNplnI_t*(H`>G1GSEG;d~ldBa#zDOjpq%)wSqa(4nxcG@&tpM`NMeL*MfTZPO
+zcX!t^pl~?+nOrRa+TPw?Ru#~}!GRbZ9TkB<K-AUMiOI=HLBbXc`eGT7G-yRdK)`8l
+zZx?xad4dgyC@3fp0|NtsbtM%*a*_V36(Dw=!NEb1pPzpLCmw}`g<@o6#FR-|0>Ye*
+zj*d&_T#dL%$slP52slGSLkZ1E1PPOFnr_+w+S%C=t*x!X@AoGK6rXN4nWW_uTVG!n
+zjg5`M=ku9@gh}jf+5%!)$!(bbfAP1CjSbP<+$?f(a!f&@3`kTbxgOBo-k#{|>l2lg
+zm11II;?h)!n`8zOH4??7R)8?4tE=l`w<;<s5@TaymrMduGLtx-Vp6Lq7B`3W!<cMI
+zNr@OAA2)3hyB)<Ou(bh1GTq(X*VZ|h1f)bJ85eGjr<lABjw=CSPB0k!$DFH?$RrkS
+zOriw99EwRQZfy$1WagMPi8_g5@+Na!2MBX|dwY|blgK0%Zlg&QlV;$!1`x^g^z@iE
+zCy_~%07jEiz1*QJAgktF4eBI{Nv!~34sfiRW8AGM3CvC_R{+8srd7J;a6H8%{iSnF
+zS}8y(n4>HpMw+eM4s+<osyRvmVx%bo?J$Ra(lJLlK&qLe6d*>LwZaZ_Si9^nM;Snj
+zG`ox)=CJG8WsVYnR5mB$fEek{&Q4p*0gm0~WE2o1-QVADi#bfI+b}0%fEa16!>Ddf
+zMgTF=+=H^i9Jcb?G{<p3T)D#>Gj}|bnL`nH+vYe5h>_;nuba$q3=rmU*T4>QC<&Z0
+z#}Pn06u`A#JItY&bkZD00C9o5rl!V~<~RaqZEa0dS68QH4#i|9%uyZ?=1@##${eKu
+zVGbohCe2Y65W5}4WTwqg5|B#fC<h30C?=ELEB`M6Va`pDplAz7{#~@Rw46h_E~t|z
+zCRH=X5kTAv2NEV-7Zj6bpL%yKpv}!qW#84X3s5*5*6&>nWek$j<b&=n)XmP$u2=>n
+z4}N8MUsWeK=dWb)c<}J>@Bq0kFE8h&`ciL>jFQ#W)gOPK;?n7b-t*}-KR^Fd=2%9q
+zDSv37t*s3}_Zu1-p2~&nXCx9i-<9at%|Q<2GB-E(D-Z}gBgdwuCV!TdR$gA7Cx1$1
+z)CPmW*P&2ob7p2{Z)$2PIz2tT>!y(B9p&7~fn3Om+{((z?xgeah3wMO(!28ak&H?i
+zk7Yb@c|87`%R|}jkz?B5xTvqM&#kSky<b&TRa{X~@xaYN4&*{kxA8rYY)!&zUh|sQ
+bT+#jjzxHxs3UzY200000NkvXXu0mjfw=Y)9
+
+diff --git app/src/main/res/mipmap-hdpi/ic_random.png app/src/main/res/mipmap-hdpi/ic_random.png
+new file mode 100644
+index 0000000000000000000000000000000000000000..d1644e44363c62d443f75f67155de8ce91d021bc
+GIT binary patch
+literal 1342
+zc$@(~1;P4>P)<h;3K|Lk000e1NJLTq002k;002k`1^@s6RqeA!000FANkl<Zc-rk;
+zSxYNf5H>OH3odbVTu_My(RqjqVgxZNu8gRls4t@+D5B_ts5mMH70tkC6yp*xE{OZS
+zJv+<~7`XFy?nBM_8UvkWP&?jx$?+6?G(M#4?@M)^syaCx5FkvLFk!;{+lWZ@{QRup
+z3E=c0;+V~5HLqX1&)nn=9v&VV80H=yAD0>ae0q9X@+aV)aqr*&E<TIo{2+6tWsaZO
+zl{mxm@$s=%kx26AlR5ee4)5>pzw!idy12Obn^9D|bAHv3#Bja7zW&uI4u=u+mGPtX
+z_4QUc=l2MtVhaDkt3cp%dwWZpo13fPszf05+1c49&jQ`u-O<Lz#xA%j5lF+5*cR^s
+z*=)8wa8)GG$;pZR6GYIyVu4r$ZSyV=OVS75U7)qKHEL~brKYAPpU~0KLH+&xG&3_p
+zdwY9yd3lL@@qd9PCMGC6Je*Kod=xYq4e9lI>g(&HgM$Mh(ElMgIGFPD^N~AziY9Ia
+zaw01$3*`6_C^IvY8X6kjjM~~-DN^F%;-si?7f7vEQ$<CEl$W>=sJXdW5fN6b(#Xh&
+zlz-es3JeUS`T6<JEszr{D=U<flS3+%%EfPGWu>BA#GOC@q9r0C!o_cTdOGdw><EE?
+zo0}WT&dzr68y_D}7K=p)<U~zPjf>yN$Vi%=o)!W*ffY{f7mwWJ<fIVj<vz$@Fu3@Q
+zjg3{bl5r^z3PT7Y_nVfMMs~Yh2y}XSN>x==Qh_M<TUJ&^m<)befiO3AI2=@8U++;-
+z<L}woSw0Fy6m%Gayap76Shg|Z7#bR)#>PfUNlEc25K%>AMZ3DX;zOXYurNwUNO%=m
+ztyao2QBhG+gt!ai?8AzSi)nXvS9J64fY4}UeVqw$BM>4eBqT(Ntdf!vnwy)$h97?e
+zv!I|Lsi^Y?2;l8e3JndF^33q?u(ZU35EnCPZvs_USJU?PwpVOzZAsOz(P(sOMv;io
+z!6RX#594NNuXLHmiiDL5Lo)eik+3nmS5ohAR|i3av9U3aia9zung#|2K1?LPE)>yo
+zb$545I~j5xF)=ZUCy3lt((Hdzd3m`<Yk_$Xa@MC8$l07GB_(+jiFI{#iYsWY1j3^>
+zI5_CF2b-Fj5&}6NwbIg3k2)zgH`k|Xnj3)-Ma#>}QYG!a72Vm{sklDkZXVR$-tG}a
+zSk-Jcn-B;<=bo3B=OGdXX6NVULLfY9<KyE}f95{4$Ik0}HxIep7c-em9#MqN!~Okz
+zArN4-S}8Fx(WCQ6!hTN_aVrpdv7VkDX?!C0k5vwB$XiAFp#ou$uG8tHS+WydU0om6
+ziK8|uDk^gEpPHIVEiEl?UiN>eK=_uivdDqmiI1G;;CDgp{{xdozlb35D_0?q5J(6l
+z1o{pF9UUEUe^!GvyW*_IH;bUd!^0Kc57aF!Ep00nh<*4s*?Co-#F36<qOcqt9qk8K
+zyWJl2-b1~C3_m*@j(=XZe0e(1D?MJTtE*oa$5e2A_lpMF+S(vcjL~Q;XNl|!e({cw
+zgkygOIDm`QYW=sMpr8^QO(v5jK#65!WQ4LyGJ~PFxA%9m*?eTNSgsZp7A_VS7ccz@
+z?7lB>@8AF~-~?{0$qn=6<qN9h<m7O6O=8Gq$Yc1$&yn}SC6QSKIQsmKi^9UfAcMgW
+zqu1-TI-Tw(e+D>!3pjm?_kpN5fiPjhg!zU22g@6gnden9wg3PC07*qoM6N<$g4phO
+A#Q*>R
+
+diff --git app/src/main/res/mipmap-hdpi/ic_next.png app/src/main/res/mipmap-hdpi/ic_next.png
+new file mode 100644
+index 0000000000000000000000000000000000000000..4441357e2efad3b64f05339a861862c1c799419f
+GIT binary patch
+literal 798
+zc$@(q1L6FMP)<h;3K|Lk000e1NJLTq002k;002k`1^@s6RqeA!0008zNkl<Zc-rlp
+zO=}ua6owsZ)V83a(pGU15JgBAqAOQTx-4DRZI?pVCYvHeQixV+jo?QONk0-)WLh;Q
+zt}Xomh4k-aaeIzLu!$jcti`#$2VU+%=6c^}&fJ-~!?^|n0)apv^c_M7WiS|+WD<M&
+zCvei~v{BX*KeM;-4o*)`pON02ot?cWz3cb;c|D28%wuN{>}6(1qXVfkH+4LqR!F8n
+zqtS3{f;4`8Qb*sp!(Oj<A(PmXs;WQ8qVcNdTZ1PtZrknl^AQ{gGw6c+iE_F8V%+mI
+zfD|J9R#rglsoU*}YPDKquUY^ZTdh`AW<Vz=C!$iRd}Oa$0GVhK`ye}@QmOQby=nr~
+zY&L64kU^g{1ELJtmmLsI(q8}wfB*=900@8p2!H?xfR+;wzm?M%0q7>>ayhZHvoiz*
+zKohjRy)8T*k4Pqyf=vU^1VC1+RX7|DkxHfhDwCEDki}vVytM3eI)|Bb+nlttfLNnU
+z>U25)GzrislQuUuZ_K2*0^&cV-^9_;(L#tXDYM!92OyT+Zoe^;<_d`6Y;0@@zu&(Q
+z;yak4DAxe7TrStdOqweoK5L;+XySktQ8t_HS|$O|6$JtTad2<|KnsyUn1gT^!*dXx
+zr12z;cQL%pV?78fidd7zR}BCHAOHd&00JNY0w4eaAOHfO{|u;JuS;L6Q7V;Ct1-6>
+zIzB$$lf9rWpU>}W21EzH9IIEA3C^%2Q&m;5wYBw%z1C{Am1&E5?~pu)hlf8emoa53
+z=p9~O#bWWCJo?z{)Ef=N<8cP$h{a-0Xd*jrwOYfKJMLJ|Vh`-4P$>M0L?Tbw<NEr#
+z$)F`xS68jncuC<zBJnz%PS>;9?6=+BT{V-*eASa^+$xWqJ+K${#NK>9-`!a@Ur@YW
+z?>%ZCkpiSO(qo-#?b6Fbiu>$w<~=T=(dbGz9CieQLAT%Uf1qcv2lm3A=CL1$B8d<P
+c1VR__8^t_QwM|sJ3jhEB07*qoM6N<$f&#E&ZU6uP
+
