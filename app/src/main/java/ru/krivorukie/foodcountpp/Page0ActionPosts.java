@@ -8,16 +8,28 @@ import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 
 public class Page0ActionPosts extends Page0Posts {
+    static FragmentManager fragman;
 
+    static void init_fragman(FragmentManager f){fragman=f;} // to call from outer space
+    static void actionPostResolve(int i){
+    if(i!=0) {
+        }
 
-
-
+    }
 //TODO void [name] to replace the post with action_post
 //TODO void [name] to replace action_post with post
+    /*static void replace(boolean action, Fragment post, Fragment apost){
 
+        FragmentTransaction replacing = fragman.beginTransaction();
+        if(action){replacing.replace(post.getView().getId(),apost);
+
+
+    }*/
 
 
 
