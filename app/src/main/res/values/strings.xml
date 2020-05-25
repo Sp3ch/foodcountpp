@@ -9,6 +9,8 @@
     <string name="enter_ID">Введите ID</string>
     <string name="enter_product">Введите название продукта</string>
     <string name="enter_number">Введите количество продукта</string>
+    <string name="bug_apologise">We apologise for this, but seeing this on your screen means the mistake of one of coders of this app. It\'s likely that you make a screenshot showing all elements around this one and press that beautiful button beyond to report a bug before doing anything else in this app. \n(If you do so, we will be thankful) \n[Admins]</string>
+    <string name="report_a_bug"><![CDATA[REPORT A BUG (<5 min)]]></string>
     <string name="comment2">0</string>
     <string name="comment1">100</string>
     <string-array name="list_of_classes">

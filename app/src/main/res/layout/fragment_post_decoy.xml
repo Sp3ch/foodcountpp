@@ -9,7 +9,6 @@
     android:paddingHorizontal="4dp"
     android:paddingVertical="4dp"
     android:background="#e04b00"
-    tools:context=".FragmentPostDecoy"
     android:layout_margin="2dp">
 
     <TextView
@@ -18,15 +17,15 @@
         android:layout_height="wrap_content"
         android:layout_gravity="top|start"
         android:layout_weight="1"
-        android:text="We apologise for this, but seeing this on your screen means the mistake of one of coders of this app. It's likely that you make a screenshot showing all elements around this one and press that beautiful button beyond to report a bug before doing anything else in this app. \n(If you do so, we will be thankful) \n[Admins]" />
+        android:text="@string/bug_apologise" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/report_a_bug"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|start"
         android:layout_weight="1"
         android:background="#fabc48"
-        android:text="REPORT A BUG (&lt;5 min)" />
+        android:text="@string/report_a_bug" />
 
 </LinearLayout>
