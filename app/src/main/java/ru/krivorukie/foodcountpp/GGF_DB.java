@@ -14,7 +14,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class GGF_db {
+public class GGF_DB {
     // TODO IF YOU UPDATE THE DB STRUCTURE: realize all the DB changes here to make any version become the version you need
     // classer -- the variable to cast the SQLiteOpenHelper methods on
     public static void patch(SQLiteDatabase db, MySQLDB classer){ // void to call from onUpgrade of DBs if update is required
@@ -68,7 +68,7 @@ public class GGF_db {
 
     public class MySQLDB extends SQLiteOpenHelper {
 
-        private static final String ggf_db="GGF_db";
+        private static final String ggf_db="GGF_DB";
         private static final int version=2;
         public MySQLDB(Context context){
             super(context,ggf_db,null,1);
