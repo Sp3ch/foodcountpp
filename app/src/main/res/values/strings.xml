@@ -11,6 +11,36 @@
     <string name="enter_number">Введите количество продукта</string>
     <string name="comment2">0</string>
     <string name="comment1">100</string>
+    <string name="name1">Имя набора</string>
+    <string name="name2">ID набора</string>
+    <string name="name3">"Продуктов в наборе: "</string>
+    <string name="name4">"Масса набора: "</string>
+    <string name="name5">Пищевая ценность набора</string>
+    <string name="name6">Список продуктов</string>
+    <string name="name7">Белки</string>
+    <string name="name8">Жиры</string>
+    <string name="name9">Углеводы</string>
+    <string name="random_button">R</string>
+    <string name="enter_g">" г "</string>
+    <string name="comment3">Some product here..</string>
+    <string name="name10">Название продукта</string>
+    <string name="name11">ID продукта</string>
+    <string name="name12">Количество продукта</string>
+    <string name="enter_ml">" мл "</string>
+    <string name="enter_g_ml">" г/мл "</string>
+    <string name="name13">"Количество порций: "</string>
+    <string name="enter_num">" шт "</string>
+    <string name="auto_button">A</string>
+    <string name="name14">Полная цена продукта</string>
+    <string name="enter_rub">" руб "</string>
+    <string name="name15">Цена за 100 г</string>
+    <string name="name16">Класс продукта</string>
+    <string name="name17">"Пищевая ценность в "</string>
+    <string name="name18">Массовая доля жира</string>
+    <string name="enter_percent">" % "</string>
+    <string name="name19">"Энергетическая ценность в "</string>
+    <string name="enter_kkal">" ккал "</string>
+    <string name="enter_kdg">" кдж "</string>
     <string-array name="list_of_classes">
         <item>Мясо</item>
         <item>Рыба</item>

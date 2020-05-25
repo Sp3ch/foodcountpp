@@ -12,6 +12,7 @@
         android:layout_height="match_parent"
         android:paddingLeft="10dp"
         android:paddingRight="10dp"
+        android:paddingTop="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
 
@@ -29,7 +30,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="bottom|left"
-                    android:text="Имя набора"
+                    android:text="@string/name1"
                     android:textAlignment="gravity"
                     android:textColor="#000000"
                     android:textSize="18sp" />
@@ -41,17 +42,18 @@
 
                     <EditText
                         android:id="@+id/editText1"
-                        android:layout_width="match_parent"
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="9"
+                        android:layout_weight="5"
                         android:hint="@string/enter_name"
                         android:textAlignment="textStart"
                         android:textSize="18sp" />
 
                     <ImageButton
                         android:id="@+id/button41"
-                        android:layout_width="40dp"
+                        android:layout_width="0dp"
                         android:layout_height="40dp"
+                        android:layout_weight="1"
                         android:foreground="@drawable/ic_next_009182"
                         android:foregroundGravity="center"/>
 
@@ -61,32 +63,33 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="bottom|left"
-                    android:text="ID набора"
+                    android:text="@string/name2"
                     android:textAlignment="gravity"
                     android:textColor="#000000"
                     android:textSize="18sp" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="40dp"
+                    android:layout_height="wrap_content"
                     android:orientation="horizontal">
 
                     <EditText
                         android:id="@+id/editText2"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight="9"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="5"
                         android:hint="@string/enter_ID"
                         android:textAlignment="textStart"
                         android:textSize="18sp" />
 
                     <Button
-                        android:id="@+id/button2"
-                        android:layout_width="40dp"
+                        android:id="@+id/button42"
+                        android:layout_width="0dp"
                         android:layout_height="40dp"
+                        android:layout_weight="1"
                         android:gravity="center|center"
                         android:textAlignment="gravity"
-                        android:text="R"
+                        android:text="@string/random_button"
                         android:textColor="#009182"
                         android:textSize="18sp" />
 
@@ -101,34 +104,41 @@
                     android:layout_width="match_parent"
                     android:layout_height="0.5dp" />
 
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="5dp"
+                    android:layout_weight="9" />
+
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="40dp"
-                    android:orientation="horizontal">
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center|left">
 
                     <TextView
                         android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
+                        android:layout_height="wrap_content"
                         android:gravity="center|center"
-                        android:text="Продуктов в наборе: "
+                        android:text="@string/name3"
                         android:textAlignment="gravity"
                         android:textColor="#000000"
                         android:textSize="18sp" />
 
                     <EditText
                         android:id="@+id/editText3"
-                        android:layout_width="60dp"
-                        android:layout_height="match_parent"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
                         android:hint="@string/comment2"
                         android:textSize="18sp"
                         android:gravity="bottom|center"
                         android:textAlignment="gravity"/>
 
                     <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:gravity="center|left"
-                        android:text=" шт "
+                        android:text="@string/enter_g"
                         android:textAlignment="gravity"
                         android:textColor="#000000"
                         android:textSize="18sp" /> />
@@ -137,35 +147,37 @@
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="40dp"
-                    android:orientation="horizontal">
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center|left">
 
                     <TextView
                         android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
+                        android:layout_height="wrap_content"
                         android:gravity="center|center"
-                        android:text="Масса набора: "
+                        android:text="@string/name4"
                         android:textAlignment="gravity"
                         android:textColor="#000000"
                         android:textSize="18sp" />
 
                     <EditText
                         android:id="@+id/editText4"
-                        android:layout_width="60dp"
-                        android:layout_height="match_parent"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
                         android:hint="@string/comment2"
                         android:textSize="18sp"
                         android:gravity="bottom|center"
                         android:textAlignment="gravity"/>
 
                     <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="40dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:gravity="center|left"
-                        android:text=" г "
+                        android:text="@string/enter_g"
                         android:textAlignment="gravity"
                         android:textColor="#000000"
-                        android:textSize="18sp" /> />
+                        android:textSize="18sp" />
 
                 </LinearLayout>
 
@@ -178,149 +190,147 @@
                     android:layout_width="match_parent"
                     android:layout_height="0.5dp" />
 
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="5dp"
+                    android:layout_weight="9" />
+
+                <TextView
+                    android:id="@+id/textView5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center|left"
+                    android:text="@string/name5"
+                    android:textAlignment="gravity"
+                    android:textColor="#000000"
+                    android:textSize="18sp" />
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:id="@+id/textView5"
-                        android:layout_width="match_parent"
-                        android:layout_height="40dp"
-                        android:gravity="center|left"
-                        android:text="Пищевая ценность набора"
-                        android:textAlignment="gravity"
-                        android:textColor="#000000"
-                        android:textSize="18sp" />
+                    android:orientation="horizontal">
 
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="60dp"
-                        android:orientation="horizontal">
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center|left"
+                            android:text="@string/name7"
+                            android:textAlignment="gravity"
+                            android:textColor="#000000"
+                            android:textSize="18sp" />
 
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:layout_weight="1"
-                            android:orientation="vertical">
+                            android:orientation="horizontal">
+
+                            <EditText
+                                android:id="@+id/editText11"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:hint="@string/comment2"
+                                android:textAlignment="textStart"
+                                android:textSize="18sp" />
 
                             <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="20dp"
-                                android:gravity="center|left"
-                                android:text="Белки"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center|center"
+                                android:text="@string/enter_g"
                                 android:textAlignment="gravity"
                                 android:textColor="#000000"
                                 android:textSize="18sp" />
-
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:orientation="horizontal">
-
-                                <EditText
-                                    android:id="@+id/editText11"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:layout_weight="1"
-                                    android:hint="@string/comment2"
-                                    android:textAlignment="textStart"
-                                    android:textSize="18sp" />
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="40dp"
-                                    android:gravity="center|center"
-                                    android:text=" г   "
-                                    android:textAlignment="gravity"
-                                    android:textColor="#000000"
-                                    android:textSize="18sp" />
-
-                            </LinearLayout>
 
                         </LinearLayout>
 
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center|left"
+                            android:text="@string/name8"
+                            android:textAlignment="gravity"
+                            android:textColor="#000000"
+                            android:textSize="18sp" />
+
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:layout_weight="1"
-                            android:orientation="vertical">
+                            android:orientation="horizontal">
+
+                            <EditText
+                                android:id="@+id/editText12"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:hint="@string/comment2"
+                                android:textAlignment="textStart"
+                                android:textSize="18sp" />
 
                             <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="20dp"
-                                android:gravity="center|left"
-                                android:text="Жиры"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center|center"
+                                android:text="@string/enter_g"
                                 android:textAlignment="gravity"
                                 android:textColor="#000000"
                                 android:textSize="18sp" />
-
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:orientation="horizontal">
-
-                                <EditText
-                                    android:id="@+id/editText12"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:layout_weight="1"
-                                    android:hint="@string/comment2"
-                                    android:textAlignment="textStart"
-                                    android:textSize="18sp" />
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="40dp"
-                                    android:gravity="center|center"
-                                    android:text=" г   "
-                                    android:textAlignment="gravity"
-                                    android:textColor="#000000"
-                                    android:textSize="18sp" />
-
-                            </LinearLayout>
 
                         </LinearLayout>
 
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center|left"
+                            android:text="@string/name9"
+                            android:textAlignment="gravity"
+                            android:textColor="#000000"
+                            android:textSize="18sp" />
+
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:layout_weight="1"
-                            android:orientation="vertical">
+                            android:orientation="horizontal">
+
+                            <EditText
+                                android:id="@+id/editText13"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:hint="@string/comment2"
+                                android:textAlignment="textStart"
+                                android:textSize="18sp" />
 
                             <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="20dp"
-                                android:gravity="center|left"
-                                android:text="Углеводы"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center|center"
+                                android:text="@string/enter_g"
                                 android:textAlignment="gravity"
                                 android:textColor="#000000"
                                 android:textSize="18sp" />
-
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:orientation="horizontal">
-
-                                <EditText
-                                    android:id="@+id/editText13"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:layout_weight="1"
-                                    android:hint="@string/comment2"
-                                    android:textAlignment="textStart"
-                                    android:textSize="18sp" />
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="40dp"
-                                    android:gravity="center|center"
-                                    android:text=" г "
-                                    android:textAlignment="gravity"
-                                    android:textColor="#000000"
-                                    android:textSize="18sp" />
-
-                            </LinearLayout>
 
                         </LinearLayout>
 
@@ -337,11 +347,16 @@
                     android:layout_width="match_parent"
                     android:layout_height="0.5dp" />
 
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="5dp"
+                    android:layout_weight="9" />
+
                 <TextView
                     android:layout_width="match_parent"
-                    android:layout_height="40dp"
+                    android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="Список продуктов"
+                    android:text="@string/name6"
                     android:textAlignment="gravity"
                     android:textColor="#000000"
                     android:textSize="18sp" />
@@ -349,41 +364,45 @@
                 <LinearLayout
                     android:id="@+id/linearLayout1"
                     android:layout_width="match_parent"
-                    android:layout_height="40dp"
-                    android:orientation="horizontal">
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center|left">
 
                     <TextView
                         android:id="@+id/textView0"
-                        android:layout_width="match_parent"
-                        android:layout_height="40dp"
-                        android:layout_weight="13"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="4"
                         android:gravity="left|center"
-                        android:text="Some product here.."
+                        android:text="@string/comment3"
                         android:textAlignment="gravity"
                         android:textColor="#000000"
                         android:textSize="14sp" />
 
                     <ImageButton
                         android:id="@+id/button43"
-                        android:layout_width="40dp"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
                         android:layout_height="40dp"
                         android:foreground="@drawable/ic_edit_009182"
                         android:foregroundGravity="center" />
 
                     <ImageButton
                         android:id="@+id/button44"
-                        android:layout_width="40dp"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
                         android:layout_height="40dp"
                         android:foreground="@drawable/ic_delete_009182"
                         android:foregroundGravity="center" />
 
                 </LinearLayout>
 
-                <Button
+                <ImageButton
+                    android:id="@+id/button45"
                     android:layout_width="match_parent"
                     android:layout_height="40dp"
-                    android:gravity="center"
-                    android:text="Добавить новый продукт"/>
+                    android:foreground="@drawable/ic_add_009182"
+                    android:foregroundGravity="center"/>
 
             </LinearLayout>
 
