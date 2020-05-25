@@ -68,7 +68,7 @@ public class GGF_db {
 
     public class MySQLDB extends SQLiteOpenHelper {
 
-        private static final String ggf_db="GGF_DB";
+        private static final String ggf_db="GGF_db";
         private static final int version=2;
         public MySQLDB(Context context){
             super(context,ggf_db,null,1);
