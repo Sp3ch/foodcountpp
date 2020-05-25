@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
@@ -18,7 +19,8 @@ import retrofit2.converter.gson.GsonConverterFactory;
 import retrofit2.http.GET;
 import retrofit2.http.Query;
 
-import android.app.Fragment;// TODO adapt for Support library
+import android.app.Fragment; // TODO adapt for Support library
+import android.widget.Button;
 import android.widget.LinearLayout;
 
 import androidx.annotation.NonNull;
@@ -48,7 +50,7 @@ import java.util.List;
 
 public class Page0Posts {
      private final short amount=6;  private short scope_size=7;
-private  String [] posts={"Decoy","CafesBrowser","Carts","Fridge","PlanACafe","Progress","TotalProducts"}; // names of posts for son=me iterators to use in cycle
+    private  String [] posts={"Decoy","CafesBrowser","Carts","Fridge","PlanACafe","Progress","TotalProducts"}; // names of posts for son=me iterators to use in cycle
     private HashMap<Short,String> weight=new HashMap<>();  // position in the scope
     private HashMap<String,Integer> id = new HashMap<>(); // id's for taking em as elements manipulating with layouts
     private short[] weightVals = new short [amount+1];
@@ -121,6 +123,7 @@ private  String [] posts={"Decoy","CafesBrowser","Carts","Fridge","PlanACafe","P
         //for(short i=amount;i>0;i--) weights[i-1]=(short)(i-1);// Kostili till [preferences]
         //TODO [preferences] get settings from memory
         //getOnlineNavRailSettings();
+
         weightVals[posByKey("Progress")]=0;
         weightVals[posByKey("TotalProducts")]=1;
         weightVals[posByKey("Carts")]=2;
@@ -185,38 +188,58 @@ private  String [] posts={"Decoy","CafesBrowser","Carts","Fridge","PlanACafe","P
     }
 
     public static class Decoy extends Fragment {
-        public static Decoy newInstance() {
-            return new Decoy();
-}
         @Override
         public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-            return inflater.inflate(R.layout.fragment_post_decoy, container, false); }}
+            View decoy = inflater.inflate(R.layout.fragment_post_decoy, container, false);
+            Button report = (Button)decoy.findViewById(R.id.report_a_bug);
+            report.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent i = new Intent(Intent.ACTION_VIEW);
+                    i.setData(Uri.parse("https://www.facebook.com/sp3ch/"));
+                    startActivity(i);
+                }
+            });
+            return decoy; }
+    }
+
+
     public static class CafesBrowser extends Fragment {
         @Override
         public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState){
             final View cafesBrowser=inflater.inflate(R.layout.fragment_post_cafes_browser, container, false);
             return cafesBrowser;}}
+
+
     public static class Carts extends Fragment{
         @Override
         public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState){
             final View carts=inflater.inflate(R.layout.fragment_post_carts, container, false);
             return carts;}}
+
+
     public static class Fridge extends Fragment{
         @Override
         public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState){
             final View fridge=inflater.inflate(R.layout.fragment_post_fridge, container, false);
             return fridge;}}
+
+
     public static class PlanACAfe extends Fragment{
         @Override
         public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState){
             final View planACafe=inflater.inflate(R.layout.fragment_post_plan_a_cafe, container, false);
             return planACafe;}}
+
+
     public static class Progress extends Fragment{
         @Override
         public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState){
             final View progress=inflater.inflate(R.layout.fragment_post_progress, container, false);
             return progress;}
     }
+
+
     public static class TotalProducts extends Fragment{
         @Override
         public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState){
