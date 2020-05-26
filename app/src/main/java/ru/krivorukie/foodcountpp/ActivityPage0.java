@@ -50,8 +50,8 @@ Button button1,button2,button3,button4;
         setContentView(R.layout.page_0);
 
 
-        //int position=0;         //TODO
-        if(savedInstanceState!=null)fnr2=fragMan.getFragment(savedInstanceState,"fnr1");
+        //int position=0;
+        if(savedInstanceState!=null) fnr2=fragMan.getFragment(savedInstanceState,"fnr1");
 
 
 //test

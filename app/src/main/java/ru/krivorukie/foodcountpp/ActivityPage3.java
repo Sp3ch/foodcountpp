@@ -4,10 +4,17 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.LayoutInflater;
+
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -26,6 +33,22 @@ public class ActivityPage3 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.page_3);
+
+
+        RecyclerView recyclerView = (RecyclerView) findViewById(R.id.recview);
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, R.layout.page_3, array);
+        //recyclerView.setAdapter(adapter);
+
+        Button button9 = (Button) findViewById(R.id.button9);
+        button9.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(ActivityPage3.this, ActivityPage0.class);
+                i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(i);
+            }
+        });
+
 
         recyclerView = (RecyclerView) findViewById(R.id.RecyclerView31);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
@@ -58,5 +81,6 @@ public class ActivityPage3 extends AppCompatActivity {
             }
             return null;
         }
+
     }
 }

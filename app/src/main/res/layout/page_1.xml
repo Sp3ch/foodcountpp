@@ -25,8 +25,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:text="Выберите способ формирования списка покупок:"
             android:textAlignment="center"
-            android:text="Выберите способ формирования списка покупок:" />
+            android:textSize="30sp" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -35,7 +36,7 @@
             android:orientation="vertical">
 
             <Button
-                android:id="@+id/button7"
+                android:id="@+id/button9"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Автоматизировано (алгоритмом)" />
