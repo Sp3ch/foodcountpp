@@ -50,6 +50,9 @@
     <string name="name24">Список продуктов</string>
     <string name="comment4">Some shop here..</string>
     <string name="name25">Вернуться к выбору магазина</string>
+    <string name="help_button">ПОМОЩЬ</string>
+    <string name="settings_button">Настройки</string>
+    <string name="chose_button">Выбрать</string>
     <string-array name="list_of_classes">
         <item>Мясо</item>
         <item>Рыба</item>
