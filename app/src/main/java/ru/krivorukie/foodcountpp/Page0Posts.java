@@ -11,22 +11,18 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
 import retrofit2.Call;
 import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 import retrofit2.http.GET;
 import retrofit2.http.Query;
-
 import android.app.Fragment; // TODO adapt for Support library
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-
 /*Vocabulary:
 * [NOTE: correcting this, please, follow the alphabet order in lists of things]
 * IDs HashMap keys available match fragment's class name
@@ -43,25 +39,27 @@ import androidx.annotation.Nullable;
 *
 *
 * */
-
 import java.io.IOException;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 
 public class Page0Posts {
-     private final short amount=7;      // amount of posts existing in the app (Decoy not included)
-     private final short scope_size=7;  // amount of posts loaded to Page0
+    private final short amount=7;      // amount of posts existing in the app (Decoy not included)
+    private final short scope_size=7;  // amount of posts loaded to Page0
     private  String [] posts={"Decoy","ForSamsung","CafesBrowser","Carts","Fridge","PlanACafe","Progress","TotalProducts"}; // names of posts for son=me iterators to use in cycle
     private HashMap<Short,String> weight=new HashMap<>();  // position in the scope
     private HashMap<String,Integer> id = new HashMap<>(); // id's for taking em as elements manipulating with layouts
     private short[] weightVals = new short [amount+1];
     private String[] weightKeys = new String[amount+1];
-    short weightByKey(String key){for(short i=0;i<amount+1;i++)if(key==weightKeys[i])return weightVals[i]; return -1;}
-    String weightByValue(short val){for(short i=0;i<amount+1;i++)if(val==weightVals[i])return weightKeys[i]; return null;}
-    short  posByKey(String key){for(short i=0;i<amount+1;i++)if(key==weightKeys[i])return i; return 0;}
 
-    public Page0Posts(){ // initialising some things (kinda constructor for class of no exemplar)
+    short weightByKey(String key) {for(short i=0;i<amount+1;i++)if(key==weightKeys[i])return weightVals[i]; return -1;}
+
+    String weightByValue(short val) {for(short i=0;i<amount+1;i++)if(val==weightVals[i])return weightKeys[i]; return null;}
+
+    short  posByKey(String key) {for(short i=0;i<amount+1;i++)if(key==weightKeys[i])return i; return 0;}
+
+    public Page0Posts() { // initialising some things (kinda constructor for class of no exemplar)
         for(short i=0;i<amount;i++)weightVals[i]=-1;
         Short a=50;short i=0;
         for(String ii:posts){
@@ -69,7 +67,6 @@ public class Page0Posts {
             weightKeys[i]=ii;
             a++; i++;
         }
-
     }
     /*public interface UserService {
         @GET("json/")
@@ -119,63 +116,62 @@ public class Page0Posts {
     }
 */
 
-    private void getNavRailSetting(){// gets info about weight[]
+    private void getNavRailSetting() {// gets info about weight[]
         //for(short i=amount;i>0;i--) weights[i-1]=(short)(i-1);// Kostili till [preferences]
         //TODO [preferences] get settings from memory
-
         //getOnlineNavRailSettings();
         weightVals[posByKey("ForSamsung")]=0;
         weightVals[posByKey("Progress")]=1;
         weightVals[posByKey("TotalProducts")]=2;
         weightVals[posByKey("Carts")]=3;
-
-
-
     }
-    private static void setNavRailSetting(){
+
+    private static void setNavRailSetting() {
         //TODO [preferences] load settings to memory
     }
 
-    public <T extends Fragment> void launch(Activity activity, int container, T fragment){//TODO find activity using LinearLayout
+    public <T extends Fragment> void launch(Activity activity, int container, T fragment) {//TODO find activity using LinearLayout
         FragmentManager fragMan = activity.getFragmentManager();
         FragmentTransaction transaction=fragMan.beginTransaction();
         transaction.add(container, fragment);
         transaction.commit();
     }
-    public void unlaunch(){
+
+    public void unlaunch() {
 //TODO remove the fragment from the screen
-    }
-    public void relaunch(){
+}
+
+    public void relaunch() {
 //TODO replace fragment
 }
-    public void buildScroll(Activity activity, int scroll){
+
+    public void buildScroll(Activity activity, int scroll) {
         getNavRailSetting();
         String curent;Fragment frag;short count=0;
-        for(Short i=0;i<100;i++){
+        for(Short i=0;i<100;i++) {
             //curent=weight.get(i);
             curent=weightByValue(i);
             if(curent!=null) {
                 frag=new_by_name(curent);
-                if (frag!=null)
-                {
+                if (frag!=null) {
                     launch(activity,scroll,frag);
                     //TODO get an ID of
                     //id.put(curent,number);
                 }
-                else
-                {
+                else {
                     launch(activity,scroll,new Decoy());
                     //TODO get an ID of
                     //id.put(curent,number);
                 }
-                count++;}
+                count++;
+            }
             if(count==scope_size) break;
         }
     }
 
-    private Fragment new_by_name(String name){
+    private Fragment new_by_name(String name) {
         Fragment fragment;
-        switch (name){
+        switch (name) {
             case "CafesBrowser":fragment = new CafesBrowser();break;
             case "Carts":fragment = new Carts();break;
             case "Fridge":fragment = new Fridge();break;
@@ -202,47 +198,51 @@ public class Page0Posts {
                     startActivity(i);
                 }
             });
-            return decoy; }
+            return decoy;
+        }
     }
-
 
     public static class CafesBrowser extends Fragment {
         @Override
         public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState){
             final View cafesBrowser=inflater.inflate(R.layout.fragment_post_cafes_browser, container, false);
-            return cafesBrowser;}}
+            return cafesBrowser;
+        }
+    }
 
-
-    public static class Carts extends Fragment{
+    public static class Carts extends Fragment {
         @Override
         public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState){
             final View carts=inflater.inflate(R.layout.fragment_post_carts, container, false);
-            return carts;}}
+            return carts;
+        }
+    }
 
-
-    public static class Fridge extends Fragment{
+    public static class Fridge extends Fragment {
         @Override
         public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState){
             final View fridge=inflater.inflate(R.layout.fragment_post_fridge, container, false);
-            return fridge;}}
+            return fridge;
+        }
+    }
 
-
-    public static class PlanACAfe extends Fragment{
+    public static class PlanACAfe extends Fragment {
         @Override
         public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState){
             final View planACafe=inflater.inflate(R.layout.fragment_post_plan_a_cafe, container, false);
-            return planACafe;}}
+            return planACafe;
+        }
+    }
 
-
-    public static class Progress extends Fragment{
+    public static class Progress extends Fragment {
         @Override
         public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState){
             final View progress=inflater.inflate(R.layout.fragment_post_progress, container, false);
-            return progress;}
+            return progress;
+        }
     }
 
-
-    public static class TotalProducts extends Fragment{
+    public static class TotalProducts extends Fragment {
         @Override
         public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState){
             final View totalProducts=inflater.inflate(R.layout.fragment_post_total_products, container, false);
@@ -255,33 +255,35 @@ public class Page0Posts {
                     startActivity(i);
                 }
             });
-            return totalProducts;}
+            return totalProducts;
+        }
     }
 
-
-    public static class ForSamsung extends Fragment{
+    public static class ForSamsung extends Fragment {
         @Override
-        public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState){
+        public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
             final View forSamsung=inflater.inflate(R.layout.fragment_post_for_samsung, container, false);
 
             LinearLayout text36 =forSamsung.findViewById(R.id.text36);
-            text36.setOnClickListener(new View.OnClickListener(){
+            text36.setOnClickListener(new View.OnClickListener() {
                 Intent i;
                 @Override
-                public void onClick(View v){
+                public void onClick(View v) {
                     i=new Intent(forSamsung.getContext(), ActivityPage1.class);
                     startActivity(i);
                 }
             });
+
             LinearLayout text37 =forSamsung.findViewById(R.id.text37);
-            text37.setOnClickListener(new View.OnClickListener(){
+            text37.setOnClickListener(new View.OnClickListener() {
                 Intent i;
                 @Override
-                public void onClick(View v){
+                public void onClick(View v) {
                     i=new Intent(forSamsung.getContext(), ActivityPage2.class);
                     startActivity(i);
                 }
             });
+
             LinearLayout text38 =forSamsung.findViewById(R.id.text38);
             text38.setOnClickListener(new View.OnClickListener(){
                 Intent i;
@@ -290,7 +292,9 @@ public class Page0Posts {
                     i=new Intent(forSamsung.getContext(), ActivityPage3.class);
                     startActivity(i);
                 }
-            });LinearLayout text39 =forSamsung.findViewById(R.id.text39);
+            });
+
+            LinearLayout text39 =forSamsung.findViewById(R.id.text39);
             text39.setOnClickListener(new View.OnClickListener(){
                 Intent i;
                 @Override
@@ -299,6 +303,7 @@ public class Page0Posts {
                     startActivity(i);
                 }
             });
+
             LinearLayout text40 =forSamsung.findViewById(R.id.text40);
             text40.setOnClickListener(new View.OnClickListener(){
                 Intent i;
@@ -308,6 +313,7 @@ public class Page0Posts {
                     startActivity(i);
                 }
             });
+
             LinearLayout text41 =forSamsung.findViewById(R.id.text41);
             text41.setOnClickListener(new View.OnClickListener(){
                 Intent i;
@@ -317,7 +323,8 @@ public class Page0Posts {
                     startActivity(i);
                 }
             });
-            return forSamsung;}
-    }
 
+            return forSamsung;
+        }
+    }
 }

@@ -16,7 +16,7 @@
             android:id="@+id/textView32"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Для проверяющих Samsung ITAcademy"
+            android:text="@string/delete_comment_1"
             android:textAlignment="center"
             android:textSize="24sp" />
 
@@ -24,14 +24,14 @@
             android:id="@+id/textView34"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="При нажатии на элемент списка ниже будет открываться соответствующая ему страница. Данный список -- все реализованные страницы:..." />
+            android:text="@string/delete_comment_2" />
 
         <TextView
             android:id="@+id/textView35"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:clickable="false"
-            android:text="\n# Главное меню (вы уже тут (это некликабельно))\n" />
+            android:text="@string/delete_comment_3" />
 
         <LinearLayout
             android:id="@+id/text36"
@@ -45,7 +45,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:clickable="false"
-                android:text="\n# Меню выбора варианта составления списка покупок\n"/>
+                android:text="@string/delete_comment_4"/>
+
         </LinearLayout>
 
         <LinearLayout
@@ -59,7 +60,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:clickable="false"
-                android:text="\n# меню редактирования списка покупок (сильно не доделано)\n" />
+                android:text="@string/delete_comment_5" />
+
         </LinearLayout>
 
         <LinearLayout
@@ -73,7 +75,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:clickable="false"
-                android:text="\n# Отображение списка покупок (сильно не доделано)\n" />
+                android:text="@string/delete_comment_6" />
+
         </LinearLayout>
 
         <LinearLayout
@@ -87,7 +90,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:clickable="false"
-                android:text="# Заглушка для тех ссылок на новые страницы, которые хочется протестировать (или написание которых в будущем будет занимать время, при том сам элемент, в котором по матириал дизайну должна быть ссылка, включить в приложение будет нужно)\n\n" />
+                android:text="@string/delete_comment_7" />
+
         </LinearLayout>
 
         <LinearLayout
@@ -101,7 +105,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:clickable="false"
-                android:text="\n# Редактор конкретного продукта\n" />
+                android:text="@string/delete_comment_8" />
+
         </LinearLayout>
 
         <LinearLayout
@@ -115,14 +120,15 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:clickable="false"
-                android:text="\n# Редактор корзины (корзина -- единица, используемая для создания списка покупок)\n" />
+                android:text="@string/delete_comment_9" />
+
         </LinearLayout>
 
         <TextView
             android:id="@+id/textView42"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="[замечание: один из элементов ниже сообщает об ошибке, предлагая репортнуть её. Этот элемент включен умышленно для показа его существования и работоспособности]" />
+            android:text="@string/delete_comment_10" />
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -35,8 +35,8 @@ public class ActivityPage3 extends AppCompatActivity {
         setContentView(R.layout.page_3);
 
 
-        RecyclerView recyclerView = (RecyclerView) findViewById(R.id.recview);
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, R.layout.page_3, array);
+        //RecyclerView recyclerView = (RecyclerView) findViewById(R.id.recview);
+        //ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, R.layout.page_3, array);
         //recyclerView.setAdapter(adapter);
 
         Button button9 = (Button) findViewById(R.id.button9);

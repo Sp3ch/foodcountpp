@@ -5,7 +5,6 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline"
         android:layout_width="wrap_content"
@@ -42,6 +41,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:text="Сохранить и перейти к покупке" />
+
     </LinearLayout>
 
     <ScrollView
@@ -61,6 +61,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Загрузка, подождите. \nЗагрузка завершилась с ошибкой только если ниже выведено сообщение об ошибке. Ошибки нет? Тогда наберитесь терпения" />
+
         </LinearLayout>
+
     </ScrollView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

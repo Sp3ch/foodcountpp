@@ -1,7 +1,6 @@
 package ru.krivorukie.foodcountpp;
 
 import org.junit.Test;
-
 import static org.junit.Assert.*;
 
 /**

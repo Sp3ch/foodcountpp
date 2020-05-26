@@ -1,8 +1,6 @@
 package ru.krivorukie.foodcountpp;
 
 import androidx.appcompat.app.AppCompatActivity;
-
-
 import android.app.Activity;
 import android.app.Fragment;
 import android.app.FragmentManager;
@@ -23,7 +21,9 @@ import android.widget.ToggleButton;
 import static android.app.PendingIntent.getActivity;
 
 public class ActivityPage0 extends AppCompatActivity {
-Button button1,button2,button3,button4;
+
+    Button button1,button2,button3,button4;
+
     private boolean navRailDefaultState=true; // TODO fix coordinates bug and set this shit to true!!!
     private boolean isNavRailDestroyed =false;
     private boolean navRailState=false;
@@ -32,31 +32,24 @@ Button button1,button2,button3,button4;
     FragmentNavRail fnr1=new FragmentNavRail();
     Fragment fnr2;
     FragmentTransaction navRailTransaction;
-
     FragmentTransaction fragTrans;
     Page0Posts.Decoy postTest;
     Page0Posts page0 = new Page0Posts();
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {/*
+    protected void onCreate(Bundle savedInstanceState) {
+        /*
         View decorView = getWindow().getDecorView();        // /    Hiding status bar
         int uiOptions = View.SYSTEM_UI_FLAG_FULLSCREEN;     // |
         decorView.setSystemUiVisibility(uiOptions);         // \    _________________
-*/
+        */
         //requestWindowFeature(Window.FEATURE_NO_TITLE);      //will hide the title
         //getSupportActionBar().hide();                       // hide the title bar
-
         super.onCreate(savedInstanceState);
         setContentView(R.layout.page_0);
-
-
         //int position=0;
         if(savedInstanceState!=null) fnr2=fragMan.getFragment(savedInstanceState,"fnr1");
-
-
-//test
-
-
+        //test
         View.OnClickListener listener1= new View.OnClickListener(){
             Intent i1;
             @Override
@@ -66,43 +59,32 @@ Button button1,button2,button3,button4;
                         i1=new Intent(ActivityPage0.this, ActivityPage4.class);
                         startActivity(i1);
                         break;
-
                     case R.id.button3:
                         i1=new Intent(ActivityPage0.this, ActivityPage5.class);
                         startActivity(i1);
-
                         break;
-
                     case R.id.button1:
                         break;
                     default: break;
                 }
             }
-
         };
-
-
         button1 = (Button) findViewById(R.id.button1);
         button2 = (Button) findViewById(R.id.button2);
         button3 = (Button) findViewById(R.id.button3);
         button4 = (ToggleButton) findViewById(R.id.button4);
-
         button3.setOnClickListener(listener1);
         button2.setOnClickListener(listener1);
         button1.setOnClickListener(listener1);
-
-        if (savedInstanceState!=null) isNavRailDestroyed = savedInstanceState.getBoolean("nabRailState"); else isNavRailDestroyed =navRailDefaultState;
+        if (savedInstanceState!=null) isNavRailDestroyed = savedInstanceState.getBoolean("nabRailState");
+        else isNavRailDestroyed =navRailDefaultState;
     }
 
-
-
     @Override
-    protected void onStart(){
+    protected void onStart() {
         super.onStart();
-
-// building scrollview content
-        if(((LinearLayout)findViewById(R.id.postsCont)).getChildAt(0)==null){
-
+        // building scrollview content
+        if(((LinearLayout)findViewById(R.id.postsCont)).getChildAt(0)==null) {
             page0.buildScroll(ActivityPage0.this,R.id.postsCont);
             /*
             for(int i=0;i<10;i++){
@@ -113,8 +95,8 @@ Button button1,button2,button3,button4;
             fragTrans.commit(); }
             */
         }
-// building navRail
-        if(findViewById(R.id.navRail)==null && isNavRailDestroyed){
+        // building navRail
+        if(findViewById(R.id.navRail)==null && isNavRailDestroyed) {
             navRailTransaction = fragMan.beginTransaction();
             navRailTransaction.add(R.id.page_0_upper_screen, fnr1);
             navRailTransaction.commit();
@@ -124,20 +106,18 @@ Button button1,button2,button3,button4;
             isNavRailDestroyed =false;
             navRailState=true;
         }
-
-
         button4 = (ToggleButton) findViewById(R.id.button4);
         CompoundButton.OnCheckedChangeListener navRailOpener = new CompoundButton.OnCheckedChangeListener(){
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if(isChecked){
+                if(isChecked) {
                     navRailTransaction = fragMan.beginTransaction();
                     navRailTransaction.add(R.id.page_0_upper_screen, fnr1,"fnr1");
                     navRailTransaction.commit();
                     navRailState=true;
                     //TODO add navRail fragment to the screen (if navRailDefaultState then able to delete back)
                 }
-                else{
+                else {
                     if(fnr1 != null) {fragMan.beginTransaction().remove(fnr1).commit();}
                     if(fnr2 != null) {fragMan.beginTransaction().remove(fnr2).commit();fnr2=null;}
                     navRailState =false;
@@ -145,14 +125,13 @@ Button button1,button2,button3,button4;
                 }
             }};
         ((ToggleButton) button4).setOnCheckedChangeListener(navRailOpener);
-
-
-        }
-    @Override
-    protected void onResume(){
-        super.onResume();
-
     }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+    }
+
     @Override
     public void onSaveInstanceState(Bundle state) {
         super.onSaveInstanceState(state);
@@ -161,12 +140,9 @@ Button button1,button2,button3,button4;
         state.putBoolean("navRailState", isNavRailDestroyed);
     }
 }
-
-
-
-
 /*
 i1=new Intent(MainActivity.this,Page_0.class);
 startActivity(i1);
 requestWindowFeature(Window.FEATURE_NO_TITLE);      //will hide the title
-    getSupportActionBar().hide();                       // hide the title bar      */
+getSupportActionBar().hide();                       // hide the title bar
+*/

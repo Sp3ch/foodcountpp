@@ -9,14 +9,13 @@ public class UserJSONSerializer {
     static GsonBuilder builder = new GsonBuilder();
     static Gson deserializer = builder.create();
 
-
     public static class TestUser {
         public int amount;
         public int [] postsSettings=new int[amount];
         TestUser(){}
     };
 
-    public static class Product{
+    public static class Product {
             private Integer productID;
             private String name;
             private String size;
@@ -90,14 +89,21 @@ public class UserJSONSerializer {
                 this.price = price;
             }
     };
-    static TestUser deserialize (String data){
+
+    static TestUser deserialize (String data) {
         return deserializer.fromJson(data,TestUser.class);
     }
-    static String serialize(TestUser data){
+
+    static String serialize(TestUser data) {
         return serializer.toJson(data,TestUser.class);
     }
 
-    static Product deserializeProduct(String data){return deserializer.fromJson(data, Product.class);}
-    static String serializeProduct(Product data){return serializer.toJson(data, Product.class);}
+    static Product deserializeProduct(String data) {
+        return deserializer.fromJson(data, Product.class);
+    }
+
+    static String serializeProduct(Product data) {
+        return serializer.toJson(data, Product.class);
+    }
 }
 // server_adress"/json"
