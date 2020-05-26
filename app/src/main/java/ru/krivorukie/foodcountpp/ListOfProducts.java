@@ -9,9 +9,9 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 
 public class ListOfProducts extends RecyclerView.Adapter<ListOfProducts.ListHolder> {
-    ArrayList<UserJSONSerializer.Product> products;
+    ArrayList<Product> products;
 
-    public ListOfProducts (ArrayList<UserJSONSerializer.Product> products) {
+    public ListOfProducts (ArrayList<Product> products) {
         this.products = products;
     }
 
