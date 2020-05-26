@@ -12,16 +12,17 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-//import retrofit2.Call;
-//import retrofit2.Response;
-//import retrofit2.Retrofit;
-//import retrofit2.converter.gson.GsonConverterFactory;
-//import retrofit2.http.GET;
-//import retrofit2.http.Query;
+import retrofit2.Call;
+import retrofit2.Response;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
+import retrofit2.http.GET;
+import retrofit2.http.Query;
 
 import android.app.Fragment; // TODO adapt for Support library
 import android.widget.Button;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -49,8 +50,9 @@ import java.util.HashMap;
 import java.util.List;
 
 public class Page0Posts {
-     private final short amount=6;  private short scope_size=7;
-    private  String [] posts={"Decoy","CafesBrowser","Carts","Fridge","PlanACafe","Progress","TotalProducts"}; // names of posts for son=me iterators to use in cycle
+     private final short amount=7;      // amount of posts existing in the app (Decoy not included)
+     private final short scope_size=7;  // amount of posts loaded to Page0
+    private  String [] posts={"Decoy","ForSamsung","CafesBrowser","Carts","Fridge","PlanACafe","Progress","TotalProducts"}; // names of posts for son=me iterators to use in cycle
     private HashMap<Short,String> weight=new HashMap<>();  // position in the scope
     private HashMap<String,Integer> id = new HashMap<>(); // id's for taking em as elements manipulating with layouts
     private short[] weightVals = new short [amount+1];
@@ -65,8 +67,6 @@ public class Page0Posts {
         for(String ii:posts){
             weightVals[i]=a;
             weightKeys[i]=ii;
-            //id.put(i,a);
-            //weight.put(a,ii);
             a++; i++;
         }
 
@@ -101,32 +101,33 @@ public class Page0Posts {
             super.onPostExecute(result);
             Log.d("glhf", Arrays.toString(userFromServer.weights));
         }
-    }*/
-    /*public interface GerritAPI {
+    }
+    public interface GetAPI {
 
         @GET("json/")
         Call<List<User>> loadChanges();//@Query("q") String status
-    }*/
+    }
     public static class User {
         public int amount;
         public int[] weights;
     }
 
-    /*private void getOnlineNavRailSettings(){
+    private void getOnlineNavRailSettings(){
 
         Log.d("glhf", "12345");
         new MyAsyncTask().execute("");
-    }*/
-
+    }
+*/
 
     private void getNavRailSetting(){// gets info about weight[]
         //for(short i=amount;i>0;i--) weights[i-1]=(short)(i-1);// Kostili till [preferences]
         //TODO [preferences] get settings from memory
-        //getOnlineNavRailSettings();
 
-        weightVals[posByKey("Progress")]=0;
-        weightVals[posByKey("TotalProducts")]=1;
-        weightVals[posByKey("Carts")]=2;
+        //getOnlineNavRailSettings();
+        weightVals[posByKey("ForSamsung")]=0;
+        weightVals[posByKey("Progress")]=1;
+        weightVals[posByKey("TotalProducts")]=2;
+        weightVals[posByKey("Carts")]=3;
 
 
 
@@ -181,6 +182,7 @@ public class Page0Posts {
             case "PlanACafe":fragment = new PlanACAfe();break;
             case "Progress":fragment  = new Progress();break;
             case "TotalProducts":fragment = new TotalProducts();break;
+            case "ForSamsung":fragment = new ForSamsung(); break;
             case "Decoy":fragment=new Decoy(); break;
             default: fragment=null; break;
         }
@@ -253,10 +255,69 @@ public class Page0Posts {
                     startActivity(i);
                 }
             });
-            return totalProducts;}}
+            return totalProducts;}
+    }
+
+
+    public static class ForSamsung extends Fragment{
+        @Override
+        public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState){
+            final View forSamsung=inflater.inflate(R.layout.fragment_post_for_samsung, container, false);
+
+            LinearLayout text36 =forSamsung.findViewById(R.id.text36);
+            text36.setOnClickListener(new View.OnClickListener(){
+                Intent i;
+                @Override
+                public void onClick(View v){
+                    i=new Intent(forSamsung.getContext(), ActivityPage1.class);
+                    startActivity(i);
+                }
+            });
+            LinearLayout text37 =forSamsung.findViewById(R.id.text37);
+            text37.setOnClickListener(new View.OnClickListener(){
+                Intent i;
+                @Override
+                public void onClick(View v){
+                    i=new Intent(forSamsung.getContext(), ActivityPage2.class);
+                    startActivity(i);
+                }
+            });
+            LinearLayout text38 =forSamsung.findViewById(R.id.text38);
+            text38.setOnClickListener(new View.OnClickListener(){
+                Intent i;
+                @Override
+                public void onClick(View v){
+                    i=new Intent(forSamsung.getContext(), ActivityPage3.class);
+                    startActivity(i);
+                }
+            });LinearLayout text39 =forSamsung.findViewById(R.id.text39);
+            text39.setOnClickListener(new View.OnClickListener(){
+                Intent i;
+                @Override
+                public void onClick(View v){
+                    i=new Intent(forSamsung.getContext(), ActivityPageInDevelopment.class);
+                    startActivity(i);
+                }
+            });
+            LinearLayout text40 =forSamsung.findViewById(R.id.text40);
+            text40.setOnClickListener(new View.OnClickListener(){
+                Intent i;
+                @Override
+                public void onClick(View v){
+                    i=new Intent(forSamsung.getContext(), ActivityPage5.class);
+                    startActivity(i);
+                }
+            });
+            LinearLayout text41 =forSamsung.findViewById(R.id.text41);
+            text41.setOnClickListener(new View.OnClickListener(){
+                Intent i;
+                @Override
+                public void onClick(View v){
+                    i=new Intent(forSamsung.getContext(), ActivityPage4.class);
+                    startActivity(i);
+                }
+            });
+            return forSamsung;}
+    }
 
 }
-/*
-* i1=new Intent(ActivityPage0.this, ActivityPage4.class);
-                        startActivity(i1);
-* */

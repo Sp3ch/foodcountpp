@@ -14,23 +14,23 @@ public class ActivityPage1 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.page_1);
 
-        Button button7 = (Button) findViewById(R.id.button7);
+        Button button7 = (Button) findViewById(R.id.button9);
         Button button6 = (Button) findViewById(R.id.button6);
-        /*button7.setOnClickListener(new View.OnClickListener() {
+        button7.setOnClickListener(new View.OnClickListener() { // if generation is automatic
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(this, Activity.class);
+                Intent i = new Intent(ActivityPage1.this, ActivityPage3.class);
                 i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(i);
             }
         });
-        button6.setOnClickListener(new View.OnClickListener() {
+        button6.setOnClickListener(new View.OnClickListener() { // if generation is custom
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(this, Activity.class);
-                i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                Intent i = new Intent(ActivityPage1.this, ActivityPage2.class);
+                //i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(i);
             }
-        });*/
+        });
     }
 }

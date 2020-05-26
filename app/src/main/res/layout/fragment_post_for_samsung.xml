@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="1dp">
+
+        <TextView
+            android:id="@+id/textView32"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Для проверяющих Samsung ITAcademy"
+            android:textAlignment="center"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/textView34"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="При нажатии на элемент списка ниже будет открываться соответствующая ему страница. Данный список -- все реализованные страницы:..." />
+
+        <TextView
+            android:id="@+id/textView35"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            android:text="\n# Главное меню (вы уже тут (это некликабельно))\n" />
+
+        <LinearLayout
+            android:id="@+id/text36"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:clickable="true">
+
+            <TextView
+                android:id="@+id/textView36"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:text="\n# Меню выбора варианта составления списка покупок\n"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/text37"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView37"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:text="\n# меню редактирования списка покупок (сильно не доделано)\n" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/text38"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView38"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:text="\n# Отображение списка покупок (сильно не доделано)\n" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/text39"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView39"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:text="# Заглушка для тех ссылок на новые страницы, которые хочется протестировать (или написание которых в будущем будет занимать время, при том сам элемент, в котором по матириал дизайну должна быть ссылка, включить в приложение будет нужно)\n\n" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/text40"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView40"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:text="\n# Редактор конкретного продукта\n" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/text41"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView41"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:text="\n# Редактор корзины (корзина -- единица, используемая для создания списка покупок)\n" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textView42"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="[замечание: один из элементов ниже сообщает об ошибке, предлагая репортнуть её. Этот элемент включен умышленно для показа его существования и работоспособности]" />
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
