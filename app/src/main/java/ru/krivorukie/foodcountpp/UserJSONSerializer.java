@@ -17,7 +17,7 @@ public class UserJSONSerializer {
     };
 
     public static class Product{
-            private double productID;
+            private Integer productID;
             private String name;
             private String size;
             private double energy_value;
@@ -26,7 +26,7 @@ public class UserJSONSerializer {
             private double carbohydrates;
             private double price;
 
-            public double getProductID() {
+            public Integer getProductID() {
                 return productID;
             }
 
