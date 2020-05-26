@@ -10,5 +10,6 @@
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="plan to go KFC instead having a dinner while busy" />
+        android:text="@string/comment6" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

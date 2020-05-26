@@ -36,6 +36,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:text="Закончить покупку" />
+
     </LinearLayout>
 
     <androidx.constraintlayout.widget.Guideline
@@ -58,4 +59,5 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="1" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

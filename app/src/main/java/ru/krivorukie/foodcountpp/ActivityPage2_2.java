@@ -9,6 +9,6 @@ public class ActivityPage2_2 extends Activity {
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.page_2_2);
-
     }
+
 }

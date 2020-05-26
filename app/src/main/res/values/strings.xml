@@ -53,6 +53,21 @@
     <string name="help_button">ПОМОЩЬ</string>
     <string name="settings_button">Настройки</string>
     <string name="chose_button">Выбрать</string>
+    <string name="delete_comment_1">Для проверяющих Samsung ITAcademy</string>
+    <string name="delete_comment_2">При нажатии на элемент списка ниже будет открываться соответствующая ему страница. Данный список -- все реализованные страницы:...</string>
+    <string name="delete_comment_3">\n# Главное меню (вы уже тут (это некликабельно))\n</string>
+    <string name="delete_comment_4">\n# Меню выбора варианта составления списка покупок\n</string>
+    <string name="delete_comment_5">\n# меню редактирования списка покупок (сильно не доделано)\n</string>
+    <string name="delete_comment_6">\n# Отображение списка покупок (сильно не доделано)\n</string>
+    <string name="delete_comment_7"># Заглушка для тех ссылок на новые страницы, которые хочется протестировать (или написание которых в будущем будет занимать время, при том сам элемент, в котором по матириал дизайну должна быть ссылка, включить в приложение будет нужно)\n\n</string>
+    <string name="delete_comment_8">\n# Редактор конкретного продукта\n</string>
+    <string name="delete_comment_9">\n# Редактор корзины (корзина -- единица, используемая для создания списка покупок)\n</string>
+    <string name="delete_comment_10">[замечание: один из элементов ниже сообщает об ошибке, предлагая репортнуть её. Этот элемент включен умышленно для показа его существования и работоспособности]</string>
+    <string name="settings_1">set</string>
+    <string name="smth_1">What caffee has the best TMN index?</string>
+    <string name="smth_2">saved carts or carts you did not complete</string>
+    <string name="comment5">What\'s here?ah?.. Nothing?..(\n...\n...\n...\n...\nok, there is something here, hurry, or it will die soon!</string>
+    <string name="comment6">plan to go KFC instead having a dinner while busy</string>
     <string-array name="list_of_classes">
         <item>Мясо</item>
         <item>Рыба</item>

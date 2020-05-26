@@ -1,6 +1,7 @@
 package ru.krivorukie.foodcountpp;
 
 public class Product {
+
     private String name;
 
     public Product(String name) {
@@ -10,4 +11,5 @@ public class Product {
     public String getName() {
         return this.name;
     }
+
 }

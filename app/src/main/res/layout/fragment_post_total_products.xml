@@ -51,6 +51,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text='йогурт "Вкусно"' />
+
             </LinearLayout>
 
             <LinearLayout
@@ -75,8 +76,11 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="-50% [2=1] (14.05.20)" />
+
             </LinearLayout>
+
         </LinearLayout>
+
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

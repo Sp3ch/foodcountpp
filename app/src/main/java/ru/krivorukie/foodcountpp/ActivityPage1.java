@@ -13,7 +13,6 @@ public class ActivityPage1 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.page_1);
-
         Button button7 = (Button) findViewById(R.id.button9);
         Button button6 = (Button) findViewById(R.id.button6);
         button7.setOnClickListener(new View.OnClickListener() { // if generation is automatic
