@@ -104,14 +104,14 @@ Button button1,button2,button3,button4;
         if(((LinearLayout)findViewById(R.id.postsCont)).getChildAt(0)==null){
 
             page0.buildScroll(ActivityPage0.this,R.id.postsCont);
-            // /*
+            /*
             for(int i=0;i<10;i++){
             fragTrans = fragMan.beginTransaction();
             postTest = new  Page0Posts.Decoy ();
             if (i==1) fragTrans.add(R.id.postsCont, postTest, "iterator");
             else fragTrans.add(R.id.postsCont, postTest);
             fragTrans.commit(); }
-            // */
+            */
         }
 // building navRail
         if(findViewById(R.id.navRail)==null && isNavRailDestroyed){
