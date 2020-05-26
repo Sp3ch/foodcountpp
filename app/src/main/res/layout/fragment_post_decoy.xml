@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="start"
+    android:orientation="vertical"
+    android:visibility="visible"
+    android:paddingHorizontal="4dp"
+    android:paddingVertical="4dp"
+    android:background="#e04b00"
+    android:layout_margin="2dp">
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|start"
+        android:layout_weight="1"
+        android:text="@string/bug_apologise" />
+
+    <Button
+        android:id="@+id/report_a_bug"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|start"
+        android:layout_weight="1"
+        android:background="#fabc48"
+        android:text="@string/report_a_bug" />
+
+</LinearLayout>

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".ActivityPage0">
 
     <LinearLayout
         android:id="@+id/page_0_upper_screen"
@@ -28,7 +28,9 @@
                 android:id="@+id/postsCont"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical" />
+                android:orientation="vertical"
+                android:paddingRight="4dp"
+                android:background="#bbbbbb"/>
         </ScrollView>
 
 
@@ -36,6 +38,7 @@
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/p0_bottom_panel"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:orientation="horizontal"
@@ -67,9 +70,8 @@
             android:id="@+id/button4"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:layout_weight="10"
-            android:textOff="@string/m_button"
-            android:textOn="@string/m_button" />
+            android:textOff="@string/m_button_off"
+            android:textOn="@string/m_button_on" />
     </LinearLayout>
 
     <androidx.constraintlayout.widget.Guideline

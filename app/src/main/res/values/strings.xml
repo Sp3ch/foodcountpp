@@ -3,10 +3,64 @@
     <string name="f1_button">Help</string>
     <string name="s_button">Settings</string>
     <string name="go_button">Go it</string>
-    <string name="m_button">Categories</string>
+    <string name="m_button_off"><![CDATA[<—— ]]></string>
+    <string name="m_button_on"><![CDATA[ ——>]]></string>
     <string name="enter_name">Введите имя набора</string>
     <string name="enter_ID">Введите ID</string>
     <string name="enter_product">Введите название продукта</string>
     <string name="enter_number">Введите количество продукта</string>
+    <string name="bug_apologise">We apologise for this, but seeing this on your screen means the mistake of one of coders of this app. It\'s likely that you make a screenshot showing all elements around this one and press that beautiful button beyond to report a bug before doing anything else in this app. \n(If you do so, we will be thankful) \n[Admins]</string>
+    <string name="report_a_bug"><![CDATA[REPORT A BUG (<5 min)]]></string>
+    <string name="comment2">0</string>
+    <string name="comment1">100</string>
+    <string name="name1">Имя набора</string>
+    <string name="name2">ID набора</string>
+    <string name="name3">"Продуктов в наборе: "</string>
+    <string name="name4">"Масса набора: "</string>
+    <string name="name5">Пищевая ценность набора</string>
+    <string name="name6">Список продуктов</string>
+    <string name="name7">Белки</string>
+    <string name="name8">Жиры</string>
+    <string name="name9">Углеводы</string>
+    <string name="random_button">R</string>
+    <string name="enter_g">" г "</string>
+    <string name="comment3">Some product here..</string>
+    <string name="name10">Название продукта</string>
+    <string name="name11">ID продукта</string>
+    <string name="name12">Количество продукта</string>
+    <string name="enter_ml">" мл "</string>
+    <string name="enter_g_ml">" г/мл "</string>
+    <string name="name13">"Количество порций: "</string>
+    <string name="enter_num">" шт "</string>
+    <string name="auto_button">A</string>
+    <string name="name14">Полная цена продукта</string>
+    <string name="enter_rub">" руб "</string>
+    <string name="name15">Цена за 100 г</string>
+    <string name="name16">Класс продукта</string>
+    <string name="name17">"Пищевая ценность в "</string>
+    <string name="name18">Массовая доля жира</string>
+    <string name="enter_percent">" % "</string>
+    <string name="name19">"Энергетическая ценность в "</string>
+    <string name="enter_kkal">" ккал "</string>
+    <string name="enter_kdg">" кдж "</string>
+    <string name="name20">This page is currently in development. This won\'t be empty in the near future, so it is now (Snowbell is here, he guards this page till I come and fix it. Don\'t worry about Snowbell, he won\'t hurt a bug...)</string>
+    <string name="name21">Магазин</string>
+    <string name="name22">Продукты</string>
+    <string name="name23">Перейти к списку продуктов</string>
+    <string name="name24">Список продуктов</string>
+    <string name="comment4">Some shop here..</string>
+    <string name="name25">Вернуться к выбору магазина</string>
+    <string-array name="list_of_classes">
+        <item>Мясо</item>
+        <item>Рыба</item>
+        <item>Молоко</item>
+        <item>Орехи</item>
+    </string-array>
+    <string-array name="list_of_shops">
+        <item>Окей</item>
+        <item>Billa</item>
+        <item>Eurospar</item>
+        <item>Красное и белое</item>
+    </string-array>
 
 </resources>
