@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 
 import android.os.AsyncTask;
@@ -15,6 +16,7 @@ import android.view.LayoutInflater;
 
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.Toast;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -32,6 +34,7 @@ public class ActivityPage3 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        new TaskGetList().execute("");
         setContentView(R.layout.page_3);
 
 
@@ -61,6 +64,7 @@ public class ActivityPage3 extends AppCompatActivity {
         ListOfProducts listOfProducts = new ListOfProducts(products);
 
         recyclerView.setAdapter(listOfProducts);
+
     }
 
     class TaskGetList extends AsyncTask<String, String, String> {
@@ -75,11 +79,16 @@ public class ActivityPage3 extends AppCompatActivity {
             try {
                 Response<List<UserJSONSerializer.Product>> productsResponse = call.execute();
                 productList = productsResponse.body();
-
+                Log.d("GETLIST", "Got productList " + productList.toString());
             } catch (IOException e) {
                 e.printStackTrace();
             }
             return null;
+        }
+
+        @Override
+        protected void onPostExecute(String s){
+
         }
 
     }
