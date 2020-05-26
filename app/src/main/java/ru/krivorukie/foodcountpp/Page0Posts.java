@@ -12,12 +12,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import retrofit2.Call;
-import retrofit2.Response;
-import retrofit2.Retrofit;
-import retrofit2.converter.gson.GsonConverterFactory;
-import retrofit2.http.GET;
-import retrofit2.http.Query;
+//import retrofit2.Call;
+//import retrofit2.Response;
+//import retrofit2.Retrofit;
+//import retrofit2.converter.gson.GsonConverterFactory;
+//import retrofit2.http.GET;
+//import retrofit2.http.Query;
 
 import android.app.Fragment; // TODO adapt for Support library
 import android.widget.Button;
@@ -71,7 +71,7 @@ public class Page0Posts {
         }
 
     }
-    public interface UserService {
+    /*public interface UserService {
         @GET("json/")
         Call<User> fetchUser(@Query("amount") int amount, @Query("postsSettings") int[] weights);
     }
@@ -101,22 +101,22 @@ public class Page0Posts {
             super.onPostExecute(result);
             Log.d("glhf", Arrays.toString(userFromServer.weights));
         }
-    }
-    public interface GerritAPI {
+    }*/
+    /*public interface GerritAPI {
 
         @GET("json/")
         Call<List<User>> loadChanges();//@Query("q") String status
-    }
+    }*/
     public static class User {
         public int amount;
         public int[] weights;
     }
 
-    private void getOnlineNavRailSettings(){
+    /*private void getOnlineNavRailSettings(){
 
         Log.d("glhf", "12345");
         new MyAsyncTask().execute("");
-    }
+    }*/
 
 
     private void getNavRailSetting(){// gets info about weight[]

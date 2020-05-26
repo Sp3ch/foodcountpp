@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ActivityPage0">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="top|fill_vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="bottom|left"
+                    android:text="@string/name24"
+                    android:textAlignment="gravity"
+                    android:textColor="#000000"
+                    android:textSize="18sp"/>
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="5dp"
+                    android:layout_weight="9" />
+
+                <TextureView
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp" />
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="5dp"
+                    android:layout_weight="9" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center|left">
+
+                    <TextView
+                        android:id="@+id/textView0"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="4"
+                        android:gravity="left|center"
+                        android:text="@string/comment4"
+                        android:textAlignment="gravity"
+                        android:textColor="#000000"
+                        android:textSize="14sp" />
+
+                    <ImageButton
+                        android:id="@+id/button2_21"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="40dp"
+                        android:foreground="@drawable/ic_edit_009182"
+                        android:foregroundGravity="center" />
+
+                    <ImageButton
+                        android:id="@+id/button2_22"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:foreground="@drawable/ic_delete_009182"
+                        android:foregroundGravity="center" />
+
+                </LinearLayout>
+
+                <ListView
+                    android:id="@+id/list_2_21"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="5dp"
+                    android:layout_weight="9" />
+
+                <TextureView
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp" />
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="5dp"
+                    android:layout_weight="9" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center|center">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="5"
+                        android:gravity="bottom|left"
+                        android:text="@string/name25"
+                        android:textAlignment="gravity"
+                        android:textColor="#000000"
+                        android:textSize="18sp" />
+
+                    <ImageButton
+                        android:id="@+id/button2_23"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_weight="1"
+                        android:foreground="@drawable/ic_next_009182"
+                        android:foregroundGravity="center"/>
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
