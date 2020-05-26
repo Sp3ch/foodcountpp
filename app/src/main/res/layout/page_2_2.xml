@@ -30,33 +30,10 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="bottom|left"
-                    android:text="@string/name21"
+                    android:text="@string/name24"
                     android:textAlignment="gravity"
                     android:textColor="#000000"
-                    android:textSize="18sp" />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-                    <Spinner
-                        android:id="@+id/spinner2_11"
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="5"
-                        android:entries="@array/list_of_shops"
-                        android:gravity="bottom|left" />
-
-                    <ImageButton
-                        android:id="@+id/button2_11"
-                        android:layout_width="0dp"
-                        android:layout_height="40dp"
-                        android:layout_weight="1"
-                        android:foreground="@drawable/ic_next_009182"
-                        android:foregroundGravity="center"/>
-
-                </LinearLayout>
+                    android:textSize="18sp"/>
 
                 <Space
                     android:layout_width="wrap_content"
@@ -72,41 +49,43 @@
                     android:layout_height="5dp"
                     android:layout_weight="9" />
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="bottom|left"
-                    android:text="@string/name22"
-                    android:textAlignment="gravity"
-                    android:textColor="#000000"
-                    android:textSize="18sp" />
-
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                    android:orientation="horizontal"
+                    android:gravity="center|left">
 
-                    <EditText
-                        android:id="@+id/editText2_11"
+                    <TextView
+                        android:id="@+id/textView0"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="5"
-                        android:hint="@string/enter_product"
-                        android:textAlignment="textStart"
-                        android:textSize="18sp" />
+                        android:layout_weight="4"
+                        android:gravity="left|center"
+                        android:text="@string/comment4"
+                        android:textAlignment="gravity"
+                        android:textColor="#000000"
+                        android:textSize="14sp" />
 
                     <ImageButton
-                        android:id="@+id/button2_12"
+                        android:id="@+id/button2_21"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="40dp"
+                        android:foreground="@drawable/ic_edit_009182"
+                        android:foregroundGravity="center" />
+
+                    <ImageButton
+                        android:id="@+id/button2_22"
+                        android:layout_weight="1"
                         android:layout_width="0dp"
                         android:layout_height="40dp"
-                        android:layout_weight="1"
-                        android:foreground="@drawable/ic_search_009182"
-                        android:foregroundGravity="center"/>
+                        android:foreground="@drawable/ic_delete_009182"
+                        android:foregroundGravity="center" />
 
                 </LinearLayout>
 
                 <ListView
-                    android:id="@+id/list2_11"
+                    android:id="@+id/list_2_21"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"/>
 
@@ -135,13 +114,13 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="5"
                         android:gravity="bottom|left"
-                        android:text="@string/name23"
+                        android:text="@string/name25"
                         android:textAlignment="gravity"
                         android:textColor="#000000"
                         android:textSize="18sp" />
 
                     <ImageButton
-                        android:id="@+id/button2_13"
+                        android:id="@+id/button2_23"
                         android:layout_width="0dp"
                         android:layout_height="40dp"
                         android:layout_weight="1"
@@ -149,7 +128,6 @@
                         android:foregroundGravity="center"/>
 
                 </LinearLayout>
-
             </LinearLayout>
 
         </ScrollView>

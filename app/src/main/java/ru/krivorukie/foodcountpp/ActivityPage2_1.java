@@ -5,7 +5,7 @@ import android.os.Bundle;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
-public class ActivityPage2_1 extends Activity{
+public class ActivityPage2_1 extends Activity {
 
     String[] list_of_products = { "Мясо", "Рыба", "Морковь" };
 
