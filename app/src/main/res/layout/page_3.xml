@@ -14,11 +14,12 @@
         app:layout_constraintTop_toTopOf="@+id/guideline5">
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recview"
+            android:id="@+id/RecyclerView31"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:layout_constraintBottom_toBottomOf="@+id/guideline4"
             app:layout_constraintTop_toTopOf="@+id/guideline5"/>
+
     </ScrollView>
 
     <LinearLayout
