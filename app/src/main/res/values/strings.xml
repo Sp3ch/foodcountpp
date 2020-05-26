@@ -44,11 +44,20 @@
     <string name="enter_kkal">" ккал "</string>
     <string name="enter_kdg">" кдж "</string>
     <string name="name20">This page is currently in development. This won\'t be empty in the near future, so it is now (Snowbell is here, he guards this page till I come and fix it. Don\'t worry about Snowbell, he won\'t hurt a bug...)</string>
+    <string name="name21">Магазин</string>
+    <string name="name22">Продукты</string>
+    <string name="name23">Перейти к списку продуктов</string>
     <string-array name="list_of_classes">
         <item>Мясо</item>
         <item>Рыба</item>
         <item>Молоко</item>
         <item>Орехи</item>
+    </string-array>
+    <string-array name="list_of_shops">
+        <item>Окей</item>
+        <item>Billa</item>
+        <item>Eurospar</item>
+        <item>Красное и белое</item>
     </string-array>
 
 </resources>
