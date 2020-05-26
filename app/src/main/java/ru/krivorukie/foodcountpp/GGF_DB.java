@@ -5,20 +5,13 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.database.Cursor;
 
-import android.database.sqlite.SQLiteOpenHelper;
-
-import android.content.Context;
 import android.widget.Toast;
-
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
 
 public class GGF_DB {
     // TODO IF YOU UPDATE THE DB STRUCTURE: realize all the DB changes here to make any version become the version you need
     // classer -- the variable to cast the SQLiteOpenHelper methods on
 
-    public static void patch(SQLiteDatabase db, MySQLDB classer){ // void to call from onUpgrade of DBs if update is required
+    public static void patch(SQLiteDatabase db, SQLiteDB classer){ // void to call from onUpgrade of DBs if update is required
         classer.onCreate(db);
     };
 
@@ -31,7 +24,7 @@ public class GGF_DB {
     }
 
     public  String[] getNavRailSettings(Context context) {
-        MySQLDB dbHelper = new MySQLDB(context);
+        SQLiteDB dbHelper = new SQLiteDB(context);
         SQLiteDatabase db = dbHelper.getWritableDatabase();
         int amount;
         String data ;
@@ -59,10 +52,10 @@ public class GGF_DB {
     //
     //
 
-    public class MySQLDB extends SQLiteOpenHelper {
+    public class SQLiteDB extends SQLiteOpenHelper {
         private static final String ggf_db="GGF_DB";
         private static final int version=2;
-        public MySQLDB(Context context){
+        public SQLiteDB(Context context){
             super(context,ggf_db,null,1);
         }
 
@@ -77,7 +70,7 @@ public class GGF_DB {
 
 // the table of all prods user has saved on the device. The keys are to be adjusted so they match the proper keys on the global server
             String productsTotal="CREATE TABLE products_total(" +
-                    "id  INTEGER PRIMARY KEY, " +
+                    "id  INTEGER PRIMARY KEY AUTOINCREMENT, " +
                     "name TEXT, " +
                     "weight INTEGER, " +
                     "price INTEGER, " +
