@@ -4,13 +4,22 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.widget.ArrayAdapter;
 
+import java.io.IOException;
 import java.util.ArrayList;
+import java.util.List;
+
+import retrofit2.Call;
+import retrofit2.Response;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
 
 public class ActivityPage3 extends AppCompatActivity {
+    public List<UserJSONSerializer.Product> productList;
 
     RecyclerView recyclerView;
     @Override
@@ -29,5 +38,25 @@ public class ActivityPage3 extends AppCompatActivity {
         ListOfProducts listOfProducts = new ListOfProducts(products);
 
         recyclerView.setAdapter(listOfProducts);
+    }
+
+    class TaskGetList extends AsyncTask<String, String, String> {
+        @Override
+        protected String doInBackground(String... params) {
+            Retrofit retrofit = new Retrofit.Builder()
+                    .baseUrl("https://gottagofood-backend.herokuapp.com/")
+                    .addConverterFactory(GsonConverterFactory.create())
+                    .build();
+            ProductService service = retrofit.create(ProductService.class);
+            Call<List<UserJSONSerializer.Product>> call = service.fetchProducts();
+            try {
+                Response<List<UserJSONSerializer.Product>> productsResponse = call.execute();
+                productList = productsResponse.body();
+
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            return null;
+        }
     }
 }
