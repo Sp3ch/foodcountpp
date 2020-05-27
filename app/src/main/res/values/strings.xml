@@ -34,7 +34,7 @@
     <string name="enter_num">" шт "</string>
     <string name="auto_button">A</string>
     <string name="name14">Полная цена продукта</string>
-    <string name="enter_rub">" руб "</string>
+    <string name="enter_rub">" ₽ "</string>
     <string name="name15">Цена за 100 г</string>
     <string name="name16">Класс продукта</string>
     <string name="name17">"Пищевая ценность в "</string>
@@ -68,6 +68,10 @@
     <string name="smth_2">saved carts or carts you did not complete</string>
     <string name="comment5">What\'s here?ah?.. Nothing?..(\n...\n...\n...\n...\nok, there is something here, hurry, or it will die soon!</string>
     <string name="comment6">plan to go KFC instead having a dinner while busy</string>
+    <string name="name_of_product">Продукт</string>
+    <string name="cost_of_product">Цена</string>
+    <string name="delete_comment_11">Подождите! Список загружается. Если загрузка происходит слишком долго - обновите страницу.</string>
+    <string name="total_cost">Общая стоимость: </string>
     <string-array name="list_of_classes">
         <item>Мясо</item>
         <item>Рыба</item>

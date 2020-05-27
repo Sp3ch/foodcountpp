@@ -6,21 +6,91 @@
     android:layout_height="match_parent"
     tools:context=".ActivityPage3">
 
-    <ScrollView
-        android:id="@+id/scrollView4"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintBottom_toBottomOf="@+id/guideline4"
         app:layout_constraintTop_toTopOf="@+id/guideline5">
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/RecyclerView31"
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_constraintBottom_toBottomOf="@+id/guideline4"
-            app:layout_constraintTop_toTopOf="@+id/guideline5"/>
+            android:layout_height="match_parent"
+            android:gravity="top|fill_vertical">
 
-    </ScrollView>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView31"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="left|center"
+                    android:text="@string/delete_comment_11"
+                    android:textColor="#6A6A6A"
+                    android:textSize="16sp" />
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="10dp"
+                    android:layout_weight="9" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center|left">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="10"
+                        android:text="@string/name_of_product"
+                        android:textSize="18sp"
+                        android:gravity="left|center"
+                        android:textColor="#000000"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:text="@string/cost_of_product"
+                        android:textSize="18sp"
+                        android:gravity="center|center"
+                        android:textColor="#000000"/>
+
+                </LinearLayout>
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="10dp"
+                    android:layout_weight="9" />
+
+                <ScrollView
+                    android:id="@+id/scrollView4"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/RecyclerView31"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintBottom_toBottomOf="@+id/guideline4"
+                        app:layout_constraintTop_toTopOf="@+id/guideline5"/>
+
+                </ScrollView>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
 
     <LinearLayout
         android:id="@+id/p0_bottom_panel"

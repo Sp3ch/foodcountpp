@@ -16,6 +16,7 @@ public class UserJSONSerializer {
     };
 
     public static class Product {
+
             private Integer productID;
             private String name;
             private String size;
